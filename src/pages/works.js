@@ -20,7 +20,7 @@ export default function Home() {
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.js</code>
+            <code className={styles.code}>src/pages/works.js</code>
           </p>
           <div>
             <a
@@ -42,6 +42,7 @@ export default function Home() {
         </div>
 
         <NextLogo />
+        
         <Links />
       </main>
     </>
