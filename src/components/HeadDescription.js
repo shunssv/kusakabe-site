@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+import Image from 'next/image';
+import { Inter } from '@next/font/google';
+import styles from '@/styles/Home.module.css';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export function HeadDescription(props) {
   return (
@@ -10,7 +10,7 @@ export function HeadDescription(props) {
       <p>
         <span>{props.title} page</span>
         Get started by editing&nbsp;
-        <code className={styles.code}>src/pages/{props.title}.js</code>
+        {props.children}
       </p>
       <div>
         <a
@@ -30,5 +30,5 @@ export function HeadDescription(props) {
         </a>
       </div>
     </div>
-  )
+  );
 }
