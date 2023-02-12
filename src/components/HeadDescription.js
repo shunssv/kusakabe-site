@@ -1,8 +1,5 @@
 import Image from 'next/image';
-import { Inter } from '@next/font/google';
 import styles from '@/components/HeadDescription.module.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export function HeadDescription(props) {
   return (

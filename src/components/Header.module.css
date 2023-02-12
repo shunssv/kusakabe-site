@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: center;
+  column-gap: 3em;
+}
+
+.header a {
+  transition: opacity .4s;
+}
+
+.header a:hover {
+  opacity: .7;
+}
