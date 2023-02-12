@@ -1,14 +1,13 @@
-import { Inter } from '@next/font/google';
 import styles from '@/components/Main.module.css';
 import { Links } from '@/components/Links';
 import { NextLogo } from '@/components/NextLogo';
 import { HeadDescription } from '@/components/HeadDescription';
-
-const inter = Inter({ subsets: ['latin'] });
+import { Header } from '@/components/Header';
 
 export default function Main(props) {
   return (
     <main className={styles.main}>
+      <Header />
       <HeadDescription title={props.title}>
         <code className={styles.code}>src/pages/{props.title}.js</code>
       </HeadDescription>
