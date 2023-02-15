@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '@/components/HeadDescription.module.css';
+import styles from './HeadDescription.module.css';
 
 export function HeadDescription(props) {
   return (
