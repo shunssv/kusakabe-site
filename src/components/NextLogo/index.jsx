@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import styles from '@/components/NextLogo.module.css'
+import styles from './NextLogo.module.css'
 
 export function NextLogo() {
   return (
