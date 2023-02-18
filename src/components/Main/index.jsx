@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { useCallback } from 'react';
 
 export function Main(props) {
-  
+
   const handleClick = useCallback((e) => {
     console.log(e.target.href);
     e.preventDefault();
