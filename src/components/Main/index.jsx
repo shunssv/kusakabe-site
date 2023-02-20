@@ -17,9 +17,16 @@ export function Main(props) {
   //second array: function for updating variable
   //add a value in the parentheses if you set a default
   const [count, setCount] = useState(1);
-  const handleCounter = (e) => {
-    setCount(count => count + 1);
-  };
+
+  const handleCounter = useCallback(
+    (e) => {
+      console.log(count);
+      if (count < 10) {
+        setCount((count) => count + 1);
+      }
+    },
+    [count]
+  );
 
   return (
     <main className={styles.main}>
