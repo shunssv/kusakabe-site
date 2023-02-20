@@ -4,15 +4,23 @@ import { NextLogo } from '@/components/NextLogo';
 import { HeadDescription } from '@/components/HeadDescription';
 import { Header } from '@/components/Header';
 import Link from 'next/link';
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 
 export function Main(props) {
-
   const handleClick = useCallback((e) => {
     console.log(e.target.href);
     e.preventDefault();
   }, []);
-  
+
+  //declare useState using destructuring assignment
+  //first array: variable
+  //second array: function for updating variable
+  //add a value in the parentheses if you set a default
+  const [count, setCount] = useState(1);
+  const handleCounter = (e) => {
+    setCount(count => count + 1);
+  };
+
   return (
     <main className={styles.main}>
       <Header />
@@ -20,12 +28,12 @@ export function Main(props) {
         <code className={styles.code}>src/pages/{props.title}.js</code>
       </HeadDescription>
 
-      <Link
-        href="/works"
-        onClick={handleClick}
-      >
+      <Link href="/works" onClick={handleClick}>
         click me
       </Link>
+
+      <div>{count}</div>
+      <button onClick={handleCounter}>count me</button>
 
       <NextLogo />
       <Links />
