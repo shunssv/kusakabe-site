@@ -17,6 +17,8 @@ export function Main(props) {
   //second array: function for updating variable
   //add a value in the parentheses if you set a default
   const [count, setCount] = useState(1);
+  const [text, setText] = useState('');
+  const [isShow, setIsShow] = useState(true);
 
   const handleCounter = useCallback(
     (e) => {
@@ -27,6 +29,18 @@ export function Main(props) {
     },
     [count]
   );
+
+  const handleDisplay = useCallback(() => {
+    setIsShow((isShow) => !isShow);
+  }, []);
+
+  const handleInput = useCallback((e) => {
+    if (e.target.value.length > 5) {
+      alert('type within 5 letters!');
+      return;
+    }
+    setText(e.target.value.trim());
+  }, []);
 
   return (
     <main className={styles.main}>
@@ -39,8 +53,13 @@ export function Main(props) {
         click me
       </Link>
 
-      <div>{count}</div>
+      {isShow ? <div>{count}</div> : null}
       <button onClick={handleCounter}>count me</button>
+      <button onClick={handleDisplay}>
+        {isShow ? 'hide counter' : 'show counter'}
+      </button>
+
+      <input type="text" value={text} onChange={handleInput} />
 
       <NextLogo />
       <Links />
