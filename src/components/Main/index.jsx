@@ -24,7 +24,7 @@ export function Main(props) {
     (e) => {
       console.log(count);
       if (count < 10) {
-        setCount((count) => count + 1);
+        setCount((prevCount) => prevCount + 1);
       }
     },
     [count]
