@@ -19,6 +19,7 @@ export function Main(props) {
   const [count, setCount] = useState(1);
   const [text, setText] = useState('');
   const [isShow, setIsShow] = useState(true);
+  const [array, setArray] = useState([]);
 
   const handleCounter = useCallback(
     (e) => {
@@ -42,6 +43,16 @@ export function Main(props) {
     setText(e.target.value.trim());
   }, []);
 
+  const handleList = useCallback(() => {
+    setArray((prevArray) => {
+      if (prevArray.some((item) => item === text)) {
+        alert('you have added it already!');
+        return prevArray;
+      }
+      return [...prevArray, text];
+    });
+  }, [text]);
+
   return (
     <main className={styles.main}>
       <Header />
@@ -60,6 +71,13 @@ export function Main(props) {
       </button>
 
       <input type="text" value={text} onChange={handleInput} />
+
+      <ul>
+        {array.map((item) => {
+          return <li key={item}>{item}</li>;
+        })}
+      </ul>
+      <button onClick={handleList}>Add list</button>
 
       <NextLogo />
       <Links />
