@@ -1,17 +1,10 @@
 import Head from 'next/head';
 import { Main } from '@/components/Main';
-import { useEffect } from 'react';
+import { useBackground } from '@/hooks/useBackground';
 
 export default function Home() {
-  useEffect(() => {
-    //run when mounting
-    document.body.style.backgroundColor = 'gray';
 
-    //run when unmounting
-    return () => {
-      document.body.style.backgroundColor = '';
-    };
-  }, []);
+  useBackground();
 
   return (
     <>

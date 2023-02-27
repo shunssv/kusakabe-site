@@ -4,7 +4,10 @@ import { NextLogo } from '@/components/NextLogo';
 import { HeadDescription } from '@/components/HeadDescription';
 import { Header } from '@/components/Header';
 import Link from 'next/link';
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
+import { useCounter } from '@/hooks/useCounter';
+import { useInputList } from '@/hooks/useInputList';
+
 
 export function Main(props) {
   const handleClick = useCallback((e) => {
@@ -12,46 +15,8 @@ export function Main(props) {
     e.preventDefault();
   }, []);
 
-  //declare useState using destructuring assignment
-  //first array: variable
-  //second array: function for updating variable
-  //add a value in the parentheses if you set a default
-  const [count, setCount] = useState(1);
-  const [text, setText] = useState('');
-  const [isShow, setIsShow] = useState(true);
-  const [array, setArray] = useState([]);
-
-  const handleCounter = useCallback(
-    (e) => {
-      console.log(count);
-      if (count < 10) {
-        setCount((prevCount) => prevCount + 1);
-      }
-    },
-    [count]
-  );
-
-  const handleDisplay = useCallback(() => {
-    setIsShow((isShow) => !isShow);
-  }, []);
-
-  const handleInput = useCallback((e) => {
-    if (e.target.value.length > 5) {
-      alert('type within 5 letters!');
-      return;
-    }
-    setText(e.target.value.trim());
-  }, []);
-
-  const handleList = useCallback(() => {
-    setArray((prevArray) => {
-      if (prevArray.some((item) => item === text)) {
-        alert('you have added it already!');
-        return prevArray;
-      }
-      return [...prevArray, text];
-    });
-  }, [text]);
+  const {count, isShow, handleCounter, handleDisplay} = useCounter();
+  const {text, array, handleInput, handleList} = useInputList();
 
   return (
     <main className={styles.main}>
@@ -71,7 +36,6 @@ export function Main(props) {
       </button>
 
       <input type="text" value={text} onChange={handleInput} />
-
       <ul>
         {array.map((item) => {
           return <li key={item}>{item}</li>;
