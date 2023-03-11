@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import img404 from 'public/404.png'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.scss'
 import Link from 'next/link'
@@ -25,6 +26,7 @@ export default function Custom404() {
       <main>
         <div>
           <section>
+            <Image src={img404} width={270} height={200} alt="404 page not found" />
             <h2>404</h2>
             <div>
               <h3>whoops</h3>
@@ -36,8 +38,14 @@ export default function Custom404() {
         </div>
       </main>
       <footer>
-        <small></small>
+        <ul role="list">
+          <li><a href="https://twitter.com/shunssv" target="_blank" rel="noopener noreferrer"><Image src="/sns-twitter.svg" width={30} height={30} /></a></li>
+          <li><a href="https://www.linkedin.com/in/shunkusakabe/" target="_blank" rel="noopener noreferrer"><Image src="/sns-linkedin.svg"  width={30} height={30} /></a></li>
+          <li><a href="https://github.com/shunssv" target="_blank" rel="noopener noreferrer"><Image src="/sns-github.svg"  width={30} height={30} /></a></li>
+        </ul>
+        <small>© 2023 shun kusakabe</small>
       </footer>
     </>
   )
 }
+``
