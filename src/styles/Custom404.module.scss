@@ -1,40 +1,51 @@
+/*
+================ common ================
+*/
 .header {
   background-color: #f2f2f2;
-  padding: 0.25em 0;
-  .title {
-    text-align: center;
+  .name {
     color: #4B4B4B;
     font-weight: normal;
+    text-align: center;
   }
 }
 
 .wrapper {
   background-color: #f2f2f2;
-  padding: 0 3% 30%;
 
   .container {
     background-color: #403527;
-    padding: 25% 4%;
+    position: relative;
     
-    img {
+    .img404 {
       margin: 0 auto;
     }
   }
 }
 
+.leadtext {
+  font-weight: normal;
+}
+
+.text {
+  text-align: center;
+}
+
 .btn {
+  background-color: #bfb38e;
   display: block;
   max-width: 200px;
-  background-color: #bfb38e;
-  text-align: center;
   margin: 1em auto 0;
   padding: 0.5em 0;
   position: relative;
+  text-align: center;
 
-  &::after {
-    content: '>';
+  .arrow {
+    font-size: 0.75em;
     position: absolute;
-    right: 5%;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -44,13 +55,111 @@
   text-align: center;
 
   .snsList {
+    column-gap: 1.5em;
     display: flex;
     justify-content: center;
-    column-gap: 1.5em;
     padding: 3em 5em;
   }
 
   .copyright {
     font-size: 0.5rem;
   }
+}
+
+/*
+============ SP layout only ============
+*/
+@media screen and (max-width: 520px) {
+  .header {
+    padding: 0.25em 0;
+  }
+
+  .wrapper {
+    padding: 0 3% 30%;
+
+    .container {
+      padding: 25% 4%;
+    }
+  }
+
+  .title {
+    color: #403527;
+    font-size: 4.5rem;
+    left: 50%;
+    top: 22%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+
+  .inner {
+    padding: 3em 0 2em;
+    position: relative;
+  }
+
+  .textWrapper {
+    position: absolute;
+    right: 8%;
+    top: -60%;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .leadtext {
+    font-size: 1.25rem;
+  }
+}
+
+/*
+============ PC layout only ============
+*/
+@media screen and (min-width: 521px) {
+  .wrapper {
+    padding: 0 3% 30%;
+  
+    .container {
+      padding: 25% 4%;
+    }
+  }
+  
+  .title {
+    color: #403527;
+    font-size: 4.5rem;
+    left: 0;
+    top: 0;
+    // transform: translateX(-50%);
+    position: absolute;
+  }
+  
+  .inner {
+    padding: 3em 0 2em;
+    position: relative;
+  }
+  
+  .textWrapper {
+    position: absolute;
+    right: 8%;
+    top: -60%;
+  }
+  
+  .subtitle {
+    font-size: 2rem;
+  }
+  
+  .leadtext {
+    font-size: 1.25rem;
+    font-weight: normal;
+  }
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 927px) {
+
 }

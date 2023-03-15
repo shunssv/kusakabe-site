@@ -4,6 +4,7 @@ import img404 from 'public/404.png'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Custom404.module.scss'
 import Link from 'next/link'
+import { SlArrowRight } from 'react-icons/sl'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,21 +19,23 @@ export default function Custom404() {
       </Head>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>
+        <h1 className={styles.name}>
           <Link href="/">shun kusakabe</Link>
         </h1>
       </header>
       <main>
         <div className={styles.wrapper}>
           <section className={styles.container}>
-            <Image src={img404} width={300} height={200} alt="404 page not found" />
-            <h2>404</h2>
-            <div>
-              <h3>whoops</h3>
-              <h4>page not found</h4>
-              <p>grab a cup of coffee, and take your time!</p>
+            <Image src={img404} width={300} height={200} className={styles.img404} alt="404 page not found" />
+            <h2 className={styles.title}>404</h2>
+            <div className={styles.inner}>
+              <div className={styles.textWrapper}>
+                <h3 className={styles.subtitle}>whoops</h3>
+                <h4 className={styles.leadtext}>page not found</h4>
+              </div>
+              <p className={styles.text}>grab a cup of coffee, and take your time!</p>
             </div>
-            <Link href="/" className={styles.btn}>keep browsing</Link>
+            <Link href="/" className={styles.btn}>keep browsing<SlArrowRight className={styles.arrow} /></Link>
           </section>
         </div>
       </main>
@@ -47,4 +50,3 @@ export default function Custom404() {
     </>
   )
 }
-``
