@@ -112,23 +112,19 @@
 }
 
 /*
-============ PC layout only ============
+========= Tablet and PC layout =========
 */
 @media screen and (min-width: 521px) {
-  .wrapper {
-    padding: 0 3% 30%;
-  
-    .container {
-      padding: 25% 4%;
-    }
+  .header {
+    padding: 1em 0;
   }
   
   .title {
     color: #403527;
-    font-size: 4.5rem;
-    left: 0;
+    font-size: 6rem;
+    left: 50%;
     top: 0;
-    // transform: translateX(-50%);
+    transform: translateX(-50%);
     position: absolute;
   }
   
@@ -153,13 +149,36 @@
   }
 }
 
+/*
+========== Tablet layout only ==========
+*/
+@media screen and (min-width: 521px) and (max-width: 926px) {
+  .wrapper {
+    padding: 0 3% 25%;
+  
+    .container {
+      padding: 20% 4%;
+    }
+  }
 
+  .title {
+    top: 27%;
+  }
+}
 
-
-
-
-
-
+/*
+============ PC layout only ============
+*/
 @media screen and (min-width: 927px) {
+  .wrapper {
+    padding: 0 3% 12%;
+  
+    .container {
+      padding: 6% 4%;
+    }
+  }
 
+  .title {
+    top: 25%;
+  }
 }

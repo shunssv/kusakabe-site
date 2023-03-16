@@ -26,7 +26,7 @@ export default function Custom404() {
       <main>
         <div className={styles.wrapper}>
           <section className={styles.container}>
-            <Image src={img404} width={300} height={200} className={styles.img404} alt="404 page not found" />
+            <Image src={img404} width={500} height={300} className={styles.img404} alt="404 page not found" />
             <h2 className={styles.title}>404</h2>
             <div className={styles.inner}>
               <div className={styles.textWrapper}>
