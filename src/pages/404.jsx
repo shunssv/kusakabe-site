@@ -1,12 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import img404 from 'public/404.png'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Custom404.module.scss'
 import Link from 'next/link'
+import styles from '@/styles/Custom404.module.scss'
 import { SlArrowRight } from 'react-icons/sl'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Footer } from '@/components/Footer'
 
 export default function Custom404() {
   return (
@@ -26,7 +23,7 @@ export default function Custom404() {
       <main>
         <div className={styles.wrapper}>
           <section className={styles.container}>
-            <Image src={img404} width={500} height={300} className={styles.img404} alt="404 page not found" />
+            <Image src='/404.png' width={500} height={300} className={styles.img404} alt="404 page not found" />
             <h2 className={styles.title}>404</h2>
             <div className={styles.inner}>
               <div className={styles.textWrapper}>
@@ -39,14 +36,7 @@ export default function Custom404() {
           </section>
         </div>
       </main>
-      <footer className={styles.footer}>
-        <ul role="list" className={styles.snsList}>
-          <li><a href="https://twitter.com/shunssv" target="_blank" rel="noopener noreferrer"><Image src="/sns-twitter.svg" width={30} height={30} /></a></li>
-          <li><a href="https://www.linkedin.com/in/shunkusakabe/" target="_blank" rel="noopener noreferrer"><Image src="/sns-linkedin.svg"  width={30} height={30} /></a></li>
-          <li><a href="https://github.com/shunssv" target="_blank" rel="noopener noreferrer"><Image src="/sns-github.svg"  width={30} height={30} /></a></li>
-        </ul>
-        <small className={styles.copyright}>© 2023 shun kusakabe</small>
-      </footer>
+      <Footer />
     </>
   )
 }
