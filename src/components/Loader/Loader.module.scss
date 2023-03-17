@@ -1,0 +1,38 @@
+/*
+================ common ================
+*/
+.loaderWrapper {
+  display: block;
+  position: fixed;
+  background-color: #ff0844;
+  width: 100%;
+  height: 100vh;
+}
+
+/*
+============ SP layout only ============
+*/
+@media screen and (max-width: 520px) {
+
+}
+
+/*
+========= Tablet and PC layout =========
+*/
+@media screen and (min-width: 521px) {
+
+}
+
+/*
+========== Tablet layout only ==========
+*/
+@media screen and (min-width: 521px) and (max-width: 926px) {
+
+}
+
+/*
+============ PC layout only ============
+*/
+@media screen and (min-width: 927px) {
+
+}
