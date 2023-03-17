@@ -1,4 +1,4 @@
-import styles from '@/components/Loader/Loader.module.scss';
+import styles from './Loader.module.scss';
 import { useEffect, useState } from 'react';
 
 export function Loader() {
