@@ -23,6 +23,10 @@
   }
 }
 
+.textWrapper {
+  position: absolute;
+}
+
 .leadtext {
   font-weight: normal;
 }
@@ -97,8 +101,7 @@
   }
 
   .textWrapper {
-    position: absolute;
-    right: 8%;
+    right: 3%;
     top: -60%;
   }
 
@@ -129,23 +132,24 @@
   }
   
   .inner {
+    margin: 0 auto;
+    max-width: 500px;
     padding: 3em 0 2em;
     position: relative;
+    width: 100%;
   }
   
   .textWrapper {
-    position: absolute;
-    right: 8%;
-    top: -60%;
+    right: 10%;
+    top: -90%;
   }
-  
+
   .subtitle {
     font-size: 2rem;
   }
   
   .leadtext {
     font-size: 1.25rem;
-    font-weight: normal;
   }
 }
 
