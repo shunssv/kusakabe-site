@@ -4,6 +4,7 @@ import Link from 'next/link'
 import styles from '@/styles/Custom404.module.scss'
 import { SlArrowRight } from 'react-icons/sl'
 import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
 
 export default function Custom404() {
   return (
@@ -15,11 +16,7 @@ export default function Custom404() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.header}>
-        <h1 className={styles.name}>
-          <Link href="/">shun kusakabe</Link>
-        </h1>
-      </header>
+      <Header />
       <main>
         <div className={styles.wrapper}>
           <section className={styles.container}>

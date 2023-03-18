@@ -1,15 +1,4 @@
-/*
-================ common ================
-*/
-.header {
-  background-color: #f2f2f2;
-  .name {
-    color: #4B4B4B;
-    font-weight: normal;
-    text-align: center;
-  }
-}
-
+/*================ common ================*/
 .wrapper {
   background-color: #f2f2f2;
 
@@ -53,14 +42,8 @@
   }
 }
 
-/*
-============ SP layout only ============
-*/
+/*============ SP layout only ============*/
 @media screen and (max-width: 520px) {
-  .header {
-    padding: 0.25em 0;
-  }
-
   .wrapper {
     padding: 0 3% 30%;
 
@@ -97,14 +80,8 @@
   }
 }
 
-/*
-========= Tablet and PC layout =========
-*/
+/*========= Tablet and PC layout =========*/
 @media screen and (min-width: 521px) {
-  .header {
-    padding: 1em 0;
-  }
-  
   .title {
     color: #403527;
     font-size: 6rem;
@@ -136,9 +113,7 @@
   }
 }
 
-/*
-========== Tablet layout only ==========
-*/
+/*========== Tablet layout only ==========*/
 @media screen and (min-width: 521px) and (max-width: 926px) {
   .wrapper {
     padding: 0 3% 25%;
@@ -153,9 +128,7 @@
   }
 }
 
-/*
-============ PC layout only ============
-*/
+/*============ PC layout only ============*/
 @media screen and (min-width: 927px) {
   .wrapper {
     padding: 0 3% 12%;
