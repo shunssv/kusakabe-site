@@ -24,24 +24,6 @@
   text-align: center;
 }
 
-.btn {
-  background-color: #bfb38e;
-  display: block;
-  max-width: 200px;
-  margin: 1em auto 0;
-  padding: 0.5em 0;
-  position: relative;
-  text-align: center;
-
-  .arrow {
-    font-size: 0.75em;
-    position: absolute;
-    right: 4%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
 /*============ SP layout only ============*/
 @media screen and (max-width: 520px) {
   .wrapper {
