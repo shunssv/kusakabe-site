@@ -1,0 +1,122 @@
+/*================ common ================*/
+.wrapper {
+  background-color: #f2f2f2;
+
+  .container {
+    background-color: #403527;
+    position: relative;
+  }
+}
+
+.textWrapper {
+  position: absolute;
+}
+
+.leadtext {
+  font-weight: normal;
+}
+
+.text {
+  text-align: center;
+}
+
+/*============ SP layout only ============*/
+@media screen and (max-width: 520px) {
+  .wrapper {
+    padding: 0 3% 30%;
+
+    .container {
+      padding: 25% 4%;
+    }
+  }
+
+  .title {
+    color: #403527;
+    font-size: 4.5rem;
+    left: 50%;
+    top: 22%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+
+  .inner {
+    padding: 3em 0 2em;
+    position: relative;
+  }
+
+  .textWrapper {
+    right: 3%;
+    top: -60%;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .leadtext {
+    font-size: 1.25rem;
+  }
+}
+
+/*========= Tablet and PC layout =========*/
+@media screen and (min-width: 521px) {
+  .title {
+    color: #403527;
+    font-size: 6rem;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+  
+  .inner {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 3em 0 2em;
+    position: relative;
+    width: 100%;
+  }
+  
+  .textWrapper {
+    right: 10%;
+    top: -90%;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+  
+  .leadtext {
+    font-size: 1.25rem;
+  }
+}
+
+/*========== Tablet layout only ==========*/
+@media screen and (min-width: 521px) and (max-width: 926px) {
+  .wrapper {
+    padding: 0 3% 25%;
+  
+    .container {
+      padding: 20% 4%;
+    }
+  }
+
+  .title {
+    top: 27%;
+  }
+}
+
+/*============ PC layout only ============*/
+@media screen and (min-width: 927px) {
+  .wrapper {
+    padding: 0 3% 12%;
+  
+    .container {
+      padding: 6% 4%;
+    }
+  }
+
+  .title {
+    top: 25%;
+  }
+}
