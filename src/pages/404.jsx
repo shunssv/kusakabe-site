@@ -21,6 +21,7 @@ export default function Custom404() {
           height={300}
           className={styles.img404}
           alt="404 page not found"
+          priority={true}
         />
         <h2 className={`${styles.title} ${lora.className}`}>404</h2>
         <div className={styles.inner}>
