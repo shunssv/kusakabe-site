@@ -1,11 +1,14 @@
+import styles from './Footer.module.scss';
 import { Github } from '../Media/Github';
 import { Linkedin } from '../Media/Linkedin';
 import { Twitter } from '../Media/Twitter';
-import styles from './Footer.module.scss';
+import { Lora } from 'next/font/google';
+
+const lora = Lora({ subsets: ['latin'] });
 
 export function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${lora.className}`}>
       <ul role="list" className={styles.snsList}>
         <li>
           <Twitter url="https://twitter.com/shunssv" />

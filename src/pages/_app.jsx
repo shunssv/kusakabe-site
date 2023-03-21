@@ -2,6 +2,10 @@ import '@/styles/reset.scss';
 import '@/styles/globals.scss';
 import 'animate.css';
 import Head from 'next/head';
+import { PrimaryLayout } from '@/components/Layout/PrimaryLayout';
+import { EB_Garamond } from 'next/font/google';
+
+const ebGaramond = EB_Garamond({ subsets: ['latin'] });
 
 export default function App({ Component, pageProps }) {
   return (
@@ -12,7 +16,9 @@ export default function App({ Component, pageProps }) {
       </Head>
 
       <PrimaryLayout>
+        <main className={ebGaramond.className}>
           <Component {...pageProps} />
+        </main>
       </PrimaryLayout>
     </>
   );

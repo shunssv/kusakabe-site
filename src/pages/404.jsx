@@ -2,6 +2,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '@/styles/Custom404.module.scss';
 import ButtonARight from '@/components/ui/Button/ButtonARight';
+import { Lora } from 'next/font/google';
+
+const lora = Lora({ subsets: ['latin'] });
 
 export default function Custom404() {
   return (
@@ -19,7 +22,7 @@ export default function Custom404() {
           className={styles.img404}
           alt="404 page not found"
         />
-            <h2 className={styles.title}>404</h2>
+        <h2 className={`${styles.title} ${lora.className}`}>404</h2>
         <div className={styles.inner}>
           <div className={styles.textWrapper}>
             <h3 className={styles.subtitle}>whoops</h3>
