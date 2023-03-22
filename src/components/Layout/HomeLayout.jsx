@@ -1,6 +1,7 @@
 import styles from './HomeLayout.module.scss';
-import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Loader } from '@/components/Loader';
 
 export function HomeLayout({ children }) {
   return (
@@ -10,6 +11,7 @@ export function HomeLayout({ children }) {
           {children}
         </div>
       <Footer />
+      <Loader />
     </>
   );
 }

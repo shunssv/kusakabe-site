@@ -42,8 +42,6 @@ export default function Custom404() {
 
 Custom404.getLayout = function getLayout(page) {
   return (
-    <PrimaryLayout>
-      {page}
-    </PrimaryLayout>
+    <PrimaryLayout>{page}</PrimaryLayout>
   )
 }
