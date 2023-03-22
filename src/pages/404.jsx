@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from '@/styles/Custom404.module.scss';
 import ButtonARight from '@/components/ui/Button/ButtonARight';
 import { Lora } from 'next/font/google';
+import { PrimaryLayout } from '@/components/Layout/PrimaryLayout';
 
 const lora = Lora({ subsets: ['latin'] });
 
@@ -37,4 +38,12 @@ export default function Custom404() {
       </section>
     </>
   );
+}
+
+Custom404.getLayout = function getLayout(page) {
+  return (
+    <PrimaryLayout>
+      {page}
+    </PrimaryLayout>
+  )
 }
