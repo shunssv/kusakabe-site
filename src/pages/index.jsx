@@ -11,13 +11,14 @@ export default function Home() {
         <title>shun kusakabe</title>
         <meta name="description" content="I am shun kusakabe." />
       </Head>
-      <main className={styles.main}>
+
+      <section className={styles.container}>
         <div className={styles.mainteinanceContainer}>
           <SlWrench className={styles.mainteinance} />
           Currently in production
           <SlWrench className={styles.mainteinance} />
         </div>
-      </main>
+      </section>
       <Loader />
     </>
   );
