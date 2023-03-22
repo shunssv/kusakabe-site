@@ -1,11 +1,8 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.scss';
 import { Loader } from '@/components/Loader';
 import { SlWrench } from 'react-icons/sl';
-
-const inter = Inter({ subsets: ['latin'] });
+import { HomeLayout } from '@/components/Layout/HomeLayout';
 
 export default function Home() {
   return (
@@ -14,14 +11,21 @@ export default function Home() {
         <title>shun kusakabe</title>
         <meta name="description" content="I am shun kusakabe." />
       </Head>
-      <main className={styles.main}>
+
+      <section className={styles.container}>
         <div className={styles.mainteinanceContainer}>
           <SlWrench className={styles.mainteinance} />
           Currently in production
           <SlWrench className={styles.mainteinance} />
         </div>
-      </main>
+      </section>
       <Loader />
     </>
   );
+}
+
+Home.getLayout = function getLayout(page) {
+  return (
+    <HomeLayout>{page}</HomeLayout>
+  )
 }
