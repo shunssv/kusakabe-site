@@ -3,10 +3,13 @@ import styles from './Works.module.scss';
 import { SlWrench } from 'react-icons/sl';
 import { PrimaryLayout } from '@/components/Layout/PrimaryLayout';
 import { useRouter } from 'next/router';
+import { enkEnglishData } from 'data/Works';
 
 export default function Works() {
   const router = useRouter();
   const id = router.query.id;
+
+  console.log(enkEnglishData);
 
   return (
     <>
