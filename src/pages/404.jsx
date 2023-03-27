@@ -20,6 +20,7 @@ export default function Custom404() {
           src="/404.png"
           width={500}
           height={300}
+          className={styles.img404}
           alt="404 page not found"
           priority={true}
         />
