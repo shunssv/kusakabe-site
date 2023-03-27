@@ -3,22 +3,27 @@
   background-color: #403527;
 }
 
-.mainteinanceContainer {
-  font-size: 1.5rem;
-  padding: 3em 0;
-  text-align: center;
-}
-
-.mainteinance {
-  display: inline-block;
-  margin: 0 0.5em;
-  vertical-align: middle;
-}
-
 /*============ SP layout only ============*/
 @media screen and (max-width: 520px) {
   .container {
-    padding: 25% 4%;
+    padding: 5% 4% 25%;
+  }
+
+  .informationContainer {
+    padding: 8% 4% 20%;
+  }
+
+  :is(.domain, .name) {
+    text-align: center;
+  }
+
+  .name {
+    font-weight: normal;
+    font-size: 0.875rem;
+  }
+
+  :is(.summary, .comment) {
+    font-size: 0.875rem;
   }
 }
 

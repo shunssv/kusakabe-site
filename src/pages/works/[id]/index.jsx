@@ -28,7 +28,7 @@ export default function Works(props) {
       </Head>
 
       <section className={styles.container}>
-        <h2 className={playfairDisplay.className}>Works</h2>
+        <h2 className={playfairDisplay.className}>works</h2>
         <figure>
           <Image
             src="/works1.png"
@@ -38,8 +38,8 @@ export default function Works(props) {
             priority={true}
           />
         </figure>
-        <div>
-          <h3>
+        <div className={styles.informationContainer}>
+          <h3 className={styles.domain}>
             <a
               href="https://enk-english.online/"
               target="_blank"
@@ -48,11 +48,11 @@ export default function Works(props) {
               {worksList[0].domain}
             </a>
           </h3>
-          <h4>{worksList[0].name}</h4>
-          <p>{worksList[0].summary}</p>
-          <p>{worksList[0].comment}</p>
+          <h4 className={styles.name}>{worksList[0].name}</h4>
+          <p className={styles.summary}>{worksList[0].summary}</p>
+          <p className={styles.comment}>{worksList[0].comment}</p>
         </div>
-        <div>
+        <div className={styles.prerequisitesContainer}>
           <h3>prerequisites</h3>
           <dl>
             <dt>
