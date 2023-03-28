@@ -104,7 +104,7 @@ export default function Works(props) {
             </dl>
           </div>
         </div>
-        <div>
+        <div className={styles.buttonWrapper}>
           <ButtonARight url="/works/2" text="view next" />
           <Button url="/" text="go to home" />
         </div>
