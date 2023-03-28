@@ -3,6 +3,39 @@
   background-color: #403527;
 }
 
+.title {
+  font-size: 2.5rem;
+}
+
+.informationContainer p {
+  margin-top: 1.5em;
+}
+
+.prerequisitesContainer {
+  padding-bottom: 20%;
+}
+
+.prerequisitesItem {
+  padding-top: 1em;
+  .category {
+    border-bottom: solid 0.5px #ccc;
+    display: flex;
+    justify-content: space-between;
+  }
+  .badge {
+    border: solid 0.5px #ccc;
+    border-radius: 22px;
+    color: #ccc;
+    display: inline-block;
+    font-size: 0.875rem;
+    margin-top: 0.5em;
+    padding: 0 1em;
+    &:not(:last-of-type) {
+      margin-right: 0.5em;
+    }
+  }
+}
+
 /*============ SP layout only ============*/
 @media screen and (max-width: 520px) {
   .container {
@@ -10,7 +43,7 @@
   }
 
   .informationContainer {
-    padding: 8% 4% 20%;
+    padding: 8% 0 20%;
   }
 
   :is(.domain, .name) {
@@ -18,12 +51,22 @@
   }
 
   .name {
-    font-weight: normal;
     font-size: 0.875rem;
+    font-weight: normal;
   }
 
   :is(.summary, .comment) {
     font-size: 0.875rem;
+  }
+
+  .summary {
+    padding: 0 4%;
+  }
+
+  .comment {
+    background-color: #f2f2f2;
+    color: #4b4b4b;
+    padding: 1.5em;
   }
 }
 
