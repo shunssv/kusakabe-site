@@ -38,69 +38,71 @@ export default function Works(props) {
             priority={true}
           />
         </figure>
-        <div className={styles.informationContainer}>
-          <h3 className={styles.domain}>
-            <a
-              href="https://enk-english.online/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {worksList[0].domain}
-            </a>
-          </h3>
-          <h4 className={styles.name}>{worksList[0].name}</h4>
-          <p className={styles.summary}>{worksList[0].summary}</p>
-          <p className={styles.comment}>{worksList[0].comment}</p>
-        </div>
-        <div className={styles.prerequisitesContainer}>
-          <h3>prerequisites</h3>
-          <dl className={styles.prerequisitesItem}>
-            <dt className={styles.category}>
-              languages <HiCode />
-            </dt>
-            <dd className={styles.badge}>{worksList[0].languages[0]}</dd>
-            <dd className={styles.badge}>{worksList[0].languages[1]}</dd>
-            <dd className={styles.badge}>{worksList[0].languages[2]}</dd>
-            <dd className={styles.badge}>{worksList[0].languages[3]}</dd>
-          </dl>
-          <dl className={styles.prerequisitesItem}>
-            <dt className={styles.category}>
-              frameworks / libraries / systems <HiLightningBolt />
-            </dt>
-            <dd className={styles.badge}>{worksList[0].frameworks[0]}</dd>
-            <dd className={styles.badge}>{worksList[0].frameworks[1]}</dd>
-          </dl>
-          <dl className={styles.prerequisitesItem}>
-            <dt className={styles.category}>
-              tools <HiCog />
-            </dt>
-            <dd className={styles.badge}>{worksList[0].tools[0]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[1]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[2]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[3]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[4]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[5]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[6]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[7]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[8]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[9]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[10]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[11]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[12]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[13]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[14]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[15]}</dd>
-            <dd className={styles.badge}>{worksList[0].tools[16]}</dd>
-          </dl>
-          <dl className={styles.prerequisitesItem}>
-            <dt className={styles.category}>
-              roles <HiChat />
-            </dt>
-            <dd className={styles.badge}>{worksList[0].roles[0]}</dd>
-            <dd className={styles.badge}>{worksList[0].roles[1]}</dd>
-            <dd className={styles.badge}>{worksList[0].roles[2]}</dd>
-            <dd className={styles.badge}>{worksList[0].roles[3]}</dd>
-          </dl>
+        <div className={styles.detailWrapper}>
+          <div className={styles.informationContainer}>
+            <h3 className={styles.domain}>
+              <a
+                href="https://enk-english.online/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {worksList[0].domain}
+              </a>
+            </h3>
+            <h4 className={styles.name}>{worksList[0].name}</h4>
+            <p className={styles.summary}>{worksList[0].summary}</p>
+            <p className={styles.comment}>{worksList[0].comment}</p>
+          </div>
+          <div className={styles.prerequisitesContainer}>
+            <h3>prerequisites</h3>
+            <dl className={styles.prerequisitesItem}>
+              <dt className={styles.category}>
+                languages <HiCode />
+              </dt>
+              <dd className={styles.badge}>{worksList[0].languages[0]}</dd>
+              <dd className={styles.badge}>{worksList[0].languages[1]}</dd>
+              <dd className={styles.badge}>{worksList[0].languages[2]}</dd>
+              <dd className={styles.badge}>{worksList[0].languages[3]}</dd>
+            </dl>
+            <dl className={styles.prerequisitesItem}>
+              <dt className={styles.category}>
+                frameworks / libraries / systems <HiLightningBolt />
+              </dt>
+              <dd className={styles.badge}>{worksList[0].frameworks[0]}</dd>
+              <dd className={styles.badge}>{worksList[0].frameworks[1]}</dd>
+            </dl>
+            <dl className={styles.prerequisitesItem}>
+              <dt className={styles.category}>
+                tools <HiCog />
+              </dt>
+              <dd className={styles.badge}>{worksList[0].tools[0]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[1]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[2]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[3]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[4]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[5]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[6]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[7]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[8]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[9]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[10]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[11]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[12]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[13]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[14]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[15]}</dd>
+              <dd className={styles.badge}>{worksList[0].tools[16]}</dd>
+            </dl>
+            <dl className={styles.prerequisitesItem}>
+              <dt className={styles.category}>
+                roles <HiChat />
+              </dt>
+              <dd className={styles.badge}>{worksList[0].roles[0]}</dd>
+              <dd className={styles.badge}>{worksList[0].roles[1]}</dd>
+              <dd className={styles.badge}>{worksList[0].roles[2]}</dd>
+              <dd className={styles.badge}>{worksList[0].roles[3]}</dd>
+            </dl>
+          </div>
         </div>
         <div>
           <ButtonARight url="/works/2" text="view next" />

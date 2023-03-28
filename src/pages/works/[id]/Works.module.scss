@@ -11,27 +11,37 @@
   margin-top: 1.5em;
 }
 
-.prerequisitesContainer {
-  padding-bottom: 20%;
+.name {
+  font-size: 0.875rem;
+  font-weight: normal;
 }
 
-.prerequisitesItem {
-  padding-top: 1em;
-  .category {
-    border-bottom: solid 0.5px #ccc;
-    display: flex;
-    justify-content: space-between;
-  }
-  .badge {
-    border: solid 0.5px #ccc;
-    border-radius: 22px;
-    color: #ccc;
-    display: inline-block;
-    font-size: 0.875rem;
-    margin-top: 0.5em;
-    padding: 0 1em;
-    &:not(:last-of-type) {
-      margin-right: 0.5em;
+.comment {
+  background-color: #f2f2f2;
+  color: #4b4b4b;
+  padding: 1.5em;
+}
+
+.prerequisitesContainer {
+  padding-bottom: 20%;
+  .prerequisitesItem {
+    padding-top: 1em;
+    .category {
+      border-bottom: solid 0.5px #ccc;
+      display: flex;
+      justify-content: space-between;
+    }
+    .badge {
+      border: solid 0.5px #ccc;
+      border-radius: 22px;
+      color: #ccc;
+      display: inline-block;
+      font-size: 0.875rem;
+      margin-top: 0.5em;
+      padding: 0 1em;
+      &:not(:last-of-type) {
+        margin-right: 0.5em;
+      }
     }
   }
 }
@@ -50,11 +60,6 @@
     text-align: center;
   }
 
-  .name {
-    font-size: 0.875rem;
-    font-weight: normal;
-  }
-
   :is(.summary, .comment) {
     font-size: 0.875rem;
   }
@@ -62,23 +67,25 @@
   .summary {
     padding: 0 4%;
   }
-
-  .comment {
-    background-color: #f2f2f2;
-    color: #4b4b4b;
-    padding: 1.5em;
-  }
 }
 
 /*========= Tablet and PC layout =========*/
 @media screen and (min-width: 521px) {
-  
+  .title {
+    font-size: 4rem;
+  }
 }
 
 /*========== Tablet layout only ==========*/
 @media screen and (min-width: 521px) and (max-width: 926px) {
   .container {
-    padding: 20% 4%;
+    padding: 4% 4% 15%;
+  }
+  .informationContainer {
+    padding: 4% 0 10%;
+  }
+  .prerequisitesContainer {
+    padding-bottom: 10%;
   }
 }
 
@@ -86,5 +93,26 @@
 @media screen and (min-width: 927px) {
   .container {
     padding: 6% 4%;
+  }
+  .detailWrapper {
+    display: flex;
+    margin-top: 1.5em;
+    gap: 4em;
+
+    .informationContainer {
+      flex: 1;
+      padding: 0;
+
+      .domain {
+        font-size: 1.5rem;
+      }
+      .name {
+        font-size: 1.125rem;
+      }
+    }
+    .prerequisitesContainer {
+      flex: 1;
+      padding-bottom: 0;
+    }
   }
 }
