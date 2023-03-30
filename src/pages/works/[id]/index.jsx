@@ -31,11 +31,11 @@ export default function Works(props) {
         <h2 className={`${playfairDisplay.className} ${styles.title}`}>works</h2>
         <figure>
           <Image
-            src="/works1.png"
-            width={800}
-            height={560}
+            src="/works1.jpg"
+            width={700}
+            height={500}
             alt={worksList[0].name}
-            priority={true}
+            priority
           />
         </figure>
         <div className={styles.detailWrapper}>
