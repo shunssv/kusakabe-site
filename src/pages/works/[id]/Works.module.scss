@@ -1,42 +1,158 @@
 /*================ common ================*/
 .container {
   background-color: #403527;
+  .title {
+      font-size: 2.5rem;
+      margin-bottom: 0.15em;
+    }
+  .informationContainer p {
+    margin-top: 1.5em;
+  }
+  .name {
+    font-size: 0.875rem;
+    font-weight: normal;
+  }
+  .comment {
+    background-color: #f2f2f2;
+    color: #4b4b4b;
+    padding: 1.5em;
+  }
 }
 
-.mainteinanceContainer {
-  font-size: 1.5rem;
-  padding: 3em 0;
-  text-align: center;
-}
-
-.mainteinance {
-  display: inline-block;
-  margin: 0 0.5em;
-  vertical-align: middle;
+.prerequisitesContainer {
+  padding-bottom: 20%;
+  .prerequisitesItem {
+    padding-top: 1.5em;
+    .category {
+      border-bottom: solid 0.5px #ccc;
+      display: flex;
+      justify-content: space-between;
+    }
+    .badge {
+      border: solid 0.5px #ccc;
+      border-radius: 22px;
+      color: #ccc;
+      display: inline-block;
+      font-size: 0.875rem;
+      margin-top: 0.5em;
+      padding: 0 1em;
+      &:not(:last-of-type) {
+        margin-right: 0.5em;
+      }
+    }
+  }
 }
 
 /*============ SP layout only ============*/
 @media screen and (max-width: 520px) {
   .container {
-    padding: 25% 4%;
+    padding: 5% 4% 25%;
+    
+    .title {
+      position: relative;
+      &::after {
+        content: '';
+        display: inline-block;
+        border: solid 0.5px #ccc;
+        width: 64%;
+        position: absolute;
+        bottom: 15%;
+        right: 0;
+      }
+    }
+    .informationContainer {
+      padding: 8% 0 20%;
+      :is(.domain, .name) {
+        text-align: center;
+      }
+      :is(.summary, .comment) {
+        font-size: 0.875rem;
+      }
+      .summary {
+        padding: 0 4%;
+      }
+    }
   }
-}
-
-/*========= Tablet and PC layout =========*/
-@media screen and (min-width: 521px) {
-  
 }
 
 /*========== Tablet layout only ==========*/
 @media screen and (min-width: 521px) and (max-width: 926px) {
   .container {
-    padding: 20% 4%;
+    padding: 4% 4% 15%;
+    .title {
+      font-size: 4rem;
+      position: relative;
+      &::after {
+        content: '';
+        display: inline-block;
+        border: solid 0.5px #ccc;
+        width: 72%;
+        position: absolute;
+        bottom: 9px;
+        right: 0;
+      }
+    }
+    .informationContainer {
+      padding: 4% 0 10%;
+    }
+    .prerequisitesContainer {
+      padding-bottom: 10%;
+    }
   }
 }
 
 /*============ PC layout only ============*/
 @media screen and (min-width: 927px) {
   .container {
-    padding: 6% 4%;
+    padding: 2% 4% 6%;
+    .title {
+      font-size: 5rem;
+      position: relative;
+      &::after {
+        content: '';
+        display: inline-block;
+        border: solid 0.5px #ccc;
+        width: 84%;
+        position: absolute;
+        bottom: 9px;
+        right: 0;
+      }
+    }
+  }
+  .detailWrapper {
+    align-items: center;
+    display: flex;
+    gap: 4em;
+    margin-top: 3em;
+    .informationContainer {
+      flex: 1;
+      padding: 0;
+      .domain {
+        font-size: 2rem;
+      }
+      .name {
+        font-size: 1.125rem;
+        margin-top: 0.25em;
+      }
+    }
+    .prerequisitesContainer {
+      flex: 1;
+      padding-bottom: 0;
+    }
+  }
+  .buttonWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9%;
+    a {
+      flex-basis: 200px;
+      margin: 0;
+      &:nth-child(1) {
+        order: 2;
+      }
+      &:nth-child(2) {
+        order: 1;
+      }
+    }
   }
 }

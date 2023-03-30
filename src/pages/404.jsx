@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '@/styles/Custom404.module.scss';
-import ButtonARight from '@/components/ui/Button/ButtonARight';
+import { ButtonARight } from '@/components/ui/Button/ButtonARight';
 import { Lora } from 'next/font/google';
 import { PrimaryLayout } from '@/components/Layout/PrimaryLayout';
 
@@ -41,7 +41,5 @@ export default function Custom404() {
 }
 
 Custom404.getLayout = function getLayout(page) {
-  return (
-    <PrimaryLayout>{page}</PrimaryLayout>
-  )
-}
+  return <PrimaryLayout>{page}</PrimaryLayout>;
+};
