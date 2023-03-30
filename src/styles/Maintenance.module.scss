@@ -2,6 +2,18 @@
   background-color: #403527;
 }
 
+.mainteinanceContainer {
+  font-size: 1.5rem;
+  padding: 3em 0;
+  text-align: center;
+}
+
+.mainteinance {
+  display: inline-block;
+  margin: 0 0.5em;
+  vertical-align: middle;
+}
+
 /*============ SP layout only ============*/
 @media screen and (max-width: 520px) {
   .container {
