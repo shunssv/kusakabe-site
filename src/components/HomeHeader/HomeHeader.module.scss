@@ -1,0 +1,28 @@
+/*================ common ================*/
+.header {
+  background: url('/home-bg-brick.jpg') left;
+  .name {
+    color: #4B4B4B;
+    font-weight: normal;
+    text-align: center;
+  }
+}
+
+/*============ SP layout only ============*/
+@media screen and (max-width: 520px) {
+  .header {
+    padding: 0.5em 0;
+    
+    .name {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+  }
+}
+
+/*========= Tablet and PC layout =========*/
+@media screen and (min-width: 521px) {
+  .header {
+    padding: 1em 0;
+  }
+}
