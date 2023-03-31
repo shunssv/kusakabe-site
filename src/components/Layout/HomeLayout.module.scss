@@ -1,12 +1,13 @@
 /*================ common ================*/
 .wrapper {
-  background-color: #f2f2f2;
+  background: url('/home-bg-brick.jpg') 0% 100%;
+  // background-color: #f2f2f2;
 }
 
 /*============ SP layout only ============*/
 @media screen and (max-width: 520px) {
   .wrapper {
-    padding: 0 3% 30%;
+    // padding: 0 3% 30%;
   }
 }
 

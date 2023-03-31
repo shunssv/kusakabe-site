@@ -16,23 +16,25 @@ export default function Home() {
 
       <div className={styles.container}>
         <section className={styles.mvContainer}>
-          <h2 className={styles.mvInner}>
-            <Image
-              src="/mv.svg"
-              width={700}
-              height={500}
-              alt="shun kusakabe"
-              priority
-            />
-            <Image
-              src="/mv-icon.svg"
-              width={40}
-              height={60}
-              alt="shun kusakabe"
-              priority
-            />
-          </h2>
-          <MediaList />
+          <div className={styles.mvInner}>
+            <h2>
+              <Image
+                src="/mv.svg"
+                width={700}
+                height={500}
+                alt="shun kusakabe"
+                priority
+              />
+              <Image
+                src="/mv-icon.svg"
+                width={30}
+                height={40}
+                alt="shun kusakabe"
+                priority
+              />
+            </h2>
+            <MediaList />
+          </div>
         </section>
 
         <article>
