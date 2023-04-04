@@ -8,12 +8,36 @@
   padding: 0 4% 13%;
   .mvInner {
     background-color: #fff;
-    padding: 35% 2%;
+    padding: 35% 2% 5%;
+    .mvImages {
+      margin-bottom: 30%;
+      position: relative;
+      .mvItem {
+        bottom: 11px;
+        left: 100px;
+        position: absolute;
+        transform: rotate(-5deg);
+      }
+    }
   }
 }
 
 .worksContainer {
   padding: 10% 4% 30%;
+  .title {
+    font-size: 6rem;
+  }
+  .worksItemContainer {
+    .name {
+      background-color: #403527;
+      color: #fff;
+      margin: -30px 10px 0px auto;
+      padding: 0.5em 1em;
+      position: relative;
+      width: 70%;
+      z-index: 1;
+    }
+  }
 }
 
 .aboutContainer {

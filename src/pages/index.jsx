@@ -4,7 +4,6 @@ import { HomeLayout } from '@/components/Layout/HomeLayout';
 import Image from 'next/image';
 import { MediaList } from '@/components/MediaList';
 import Link from 'next/link';
-import { Github } from '@/components/Media/Github';
 
 export default function Home() {
   return (
@@ -17,7 +16,7 @@ export default function Home() {
       <div className={styles.container}>
         <section className={styles.mvContainer}>
           <div className={styles.mvInner}>
-            <h2>
+            <h2 className={styles.mvImages}>
               <Image
                 src="/mv.svg"
                 width={700}
@@ -30,6 +29,7 @@ export default function Home() {
                 width={30}
                 height={40}
                 alt="shun kusakabe"
+                className={styles.mvItem}
                 priority
               />
             </h2>
@@ -38,8 +38,8 @@ export default function Home() {
         </section>
 
         <article className={styles.worksContainer}>
-          <h3>works</h3>
-          <section>
+          <h3 className={styles.title}>works</h3>
+          <section className={styles.worksItemContainer}>
             <Link href="/works/enk-english">
               <h4>
                 <Image
@@ -50,14 +50,14 @@ export default function Home() {
                   priority
                 />
               </h4>
-              <dl>
+              <dl className={styles.name}>
                 <dt>enk-english.online</dt>
                 <dd>ENK English</dd>
                 <dd>WordPress - original theme</dd>
               </dl>
             </Link>
           </section>
-          <section>
+          <section className={styles.worksItemContainer}>
             <Link href="/works/enk-english">
               <h4>
                 <Image
@@ -68,7 +68,7 @@ export default function Home() {
                   priority
                 />
               </h4>
-              <dl>
+              <dl className={styles.name}>
                 <dt>beauty-cream_lp</dt>
                 <dd>assignment</dd>
                 <dd>Vanilla HTML / CSS / JavaScript (jQuery)</dd>
@@ -86,9 +86,28 @@ export default function Home() {
               <p>web developer / ui designer</p>
             </section>
             <div>
-              <p>I make websites and design user interfaces , and am base in Los Angeles, California. Let me introduce myself briefly. I was born and raised in Yamagata which is located at the northern Japan, called Tohoku. After graduating from a university in Tokyo, I have worked for a website agency in Tokyo for approximately four and half year. I am discovering my new career in City of Flowers and Sunshine.</p>
-              <p>If I have to describe myself within one sentence, I always look for new things and dive into them as found. Listening pop music is one of things I love to do in my spare time. I enjoy exploring many songs and artists. Once I found songs which are matched my taste, I listening to them over and over again. Similarly, I would love to learn new something while working as well and make use of them for my work.</p>
-              <p>I believe that my experiences and skills help you out. Please feel free to DM me if you are interested.</p>
+              <p>
+                I make websites and design user interfaces , and am base in Los
+                Angeles, California. Let me introduce myself briefly. I was born
+                and raised in Yamagata which is located at the northern Japan,
+                called Tohoku. After graduating from a university in Tokyo, I
+                have worked for a website agency in Tokyo for approximately four
+                and half year. I am discovering my new career in City of Flowers
+                and Sunshine.
+              </p>
+              <p>
+                If I have to describe myself within one sentence, I always look
+                for new things and dive into them as found. Listening pop music
+                is one of things I love to do in my spare time. I enjoy
+                exploring many songs and artists. Once I found songs which are
+                matched my taste, I listening to them over and over again.
+                Similarly, I would love to learn new something while working as
+                well and make use of them for my work.
+              </p>
+              <p>
+                I believe that my experiences and skills help you out. Please
+                feel free to DM me if you are interested.
+              </p>
               <p>Thank you for taking the time to read this. Bye for now!</p>
             </div>
           </div>
