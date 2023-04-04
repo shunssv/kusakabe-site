@@ -37,7 +37,7 @@ export default function Home() {
           </div>
         </section>
 
-        <article>
+        <article className={styles.worksContainer}>
           <h3>works</h3>
           <section>
             <Link href="/works/enk-english">

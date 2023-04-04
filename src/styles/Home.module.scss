@@ -12,22 +12,28 @@
   }
 }
 
+.worksContainer {
+  padding: 10% 4% 30%;
+}
+
 .aboutContainer {
   background: url('/home-bg-brick.jpg') 0% 100% ;
-  padding: 15% 4%;
+  padding: 0% 8% 15%;
   position: relative;
   &::before {
     content: '';
     display: inline-block;
-    width: 100%;
+    width: 85%;
     height: 125px;
-    background: url(/home-bg-arch-sp.png) left / 90% no-repeat;
+    background: url(/home-bg-arch-sp.png) left / 100% no-repeat;
     position: absolute;
-    top: -60px;
+    top: -55px;
+    left: 8%;
   }
   .aboutInner {
     background-color: #fff;
-    padding: 35% 2%;
+    padding: 20% 7%;
+    border-radius: 100px 100px 0 0;
   }
 }
 
