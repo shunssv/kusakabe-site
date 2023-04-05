@@ -50,7 +50,7 @@ export default function Home() {
                   priority
                 />
               </h4>
-              <dl className={styles.name}>
+              <dl className={styles.worksInfo}>
                 <dt>enk-english.online</dt>
                 <dd>ENK English</dd>
                 <dd>WordPress - original theme</dd>
@@ -68,7 +68,25 @@ export default function Home() {
                   priority
                 />
               </h4>
-              <dl className={styles.name}>
+              <dl className={styles.worksInfo}>
+                <dt>beauty-cream_lp</dt>
+                <dd>assignment</dd>
+                <dd>Vanilla HTML / CSS / JavaScript (jQuery)</dd>
+              </dl>
+            </Link>
+          </section>
+          <section className={styles.worksItemContainer}>
+            <Link href="/works/enk-english">
+              <h4>
+                <Image
+                  src="/works1.jpg"
+                  width={700}
+                  height={500}
+                  alt="ENK English"
+                  priority
+                />
+              </h4>
+              <dl className={styles.worksInfo}>
                 <dt>beauty-cream_lp</dt>
                 <dd>assignment</dd>
                 <dd>Vanilla HTML / CSS / JavaScript (jQuery)</dd>
@@ -79,13 +97,15 @@ export default function Home() {
 
         <section className={styles.aboutContainer}>
           <div className={styles.aboutInner}>
-            <h3>about</h3>
-            <section>
-              <h4>shun kusakabe</h4>
-              <span>he/him</span>
+            <h3 className={styles.title}>about</h3>
+            <section className={styles.personalInfo}>
+              <div className={styles.name}>
+                <h4>shun kusakabe</h4>
+                <span>he/him</span>
+              </div>
               <p>web developer / ui designer</p>
             </section>
-            <div>
+            <div className={styles.description}>
               <p>
                 I make websites and design user interfaces , and am base in Los
                 Angeles, California. Let me introduce myself briefly. I was born
@@ -108,7 +128,7 @@ export default function Home() {
                 I believe that my experiences and skills help you out. Please
                 feel free to DM me if you are interested.
               </p>
-              <p>Thank you for taking the time to read this. Bye for now!</p>
+              <p>Thank you for taking the time to read this.<br />Bye for now!</p>
             </div>
           </div>
         </section>
