@@ -1,7 +1,6 @@
 /*================ common ================*/
 .wrapper {
-  background: url('/home-bg-brick.jpg') 0% 100%;
-  // background-color: #f2f2f2;
+  // background: url('/home-bg-brick.jpg') 0% 100%;
 }
 
 /*============ SP layout only ============*/
@@ -14,13 +13,13 @@
 /*========== Tablet layout only ==========*/
 @media screen and (min-width: 521px) and (max-width: 926px) {
   .wrapper {
-    padding: 0 3% 25%;
+    // padding: 0 3% 25%;
   }
 }
 
 /*============ PC layout only ============*/
 @media screen and (min-width: 927px) {
   .wrapper {
-    padding: 0 3% 12%;
+    // padding: 0 3% 12%;
   }
 }

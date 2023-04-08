@@ -22,6 +22,7 @@ export default function Home() {
                 width={700}
                 height={500}
                 alt="shun kusakabe"
+                className={styles.mv}
                 priority
               />
               <Image
@@ -47,6 +48,7 @@ export default function Home() {
                   width={700}
                   height={500}
                   alt="ENK English"
+                  className={styles.worksImage}
                   priority
                 />
               </h4>
@@ -65,6 +67,7 @@ export default function Home() {
                   width={700}
                   height={500}
                   alt="ENK English"
+                  className={styles.worksImage}
                   priority
                 />
               </h4>
@@ -83,6 +86,7 @@ export default function Home() {
                   width={700}
                   height={500}
                   alt="ENK English"
+                  className={styles.worksImage}
                   priority
                 />
               </h4>

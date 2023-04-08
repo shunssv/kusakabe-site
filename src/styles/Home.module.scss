@@ -12,9 +12,12 @@
     .mvImages {
       margin-bottom: 30%;
       position: relative;
+      .mv {
+        margin: 0 auto;
+      }
       .mvItem {
-        bottom: 11px;
-        left: 100px;
+        bottom: 8px;
+        left: 88px;
         position: absolute;
         transform: rotate(-5deg);
       }
@@ -24,10 +27,15 @@
 
 .worksContainer {
   padding: 10% 4% 30%;
+  background: linear-gradient(260deg, #fdfbfb 0%, #ebedee 100%) fixed;
+  // background: linear-gradient(to top, #dfe9f3 0%, white 100%) fixed;
   .title {
     font-size: 6rem;
   }
   .worksItemContainer {
+    .worksImage {
+      margin: 0 auto;
+    }
     .worksInfo {
       background-color: #403527;
       color: #fff;
@@ -68,7 +76,7 @@
   .aboutInner {
     background-color: #fff;
     padding: 20% 7%;
-    border-radius: 100px 100px 0 0;
+    border-radius: 70px 70px 0 0;
     .title {
       font-size: 3rem;
     }
@@ -95,23 +103,33 @@
   }
 }
 
-/*============ SP layout only ============*/
-@media screen and (max-width: 520px) {
-  .container {
-    // padding: 25% 4%;
+/* ============ SP layout only ============ */
+@media (max-width: 520px) {
+
+}
+
+/* ========= Tablet and PC layout ========= */
+@media (min-width: 521px) {
+  .worksContainer {
+    .worksItemContainer {
+      .worksInfo {
+        margin: -30px 20px 0px auto;
+      }
+    }
+  }
+  .aboutContainer::before {
+    background: url(/home-bg-arch-pc.png) left / 100% no-repeat;
   }
 }
 
-/*========== Tablet layout only ==========*/
-@media screen and (min-width: 521px) and (max-width: 926px) {
-  .container {
-    padding: 20% 4%;
+/* ========== Tablet layout only ========== */
+@media (min-width: 521px) and (max-width: 926px) {
+  .aboutContainer {
+    padding: 7% 10% 15%;
   }
 }
 
-/*============ PC layout only ============*/
-@media screen and (min-width: 927px) {
-  .container {
-    padding: 6% 4%;
-  }
+/* ============ PC layout only ============ */
+@media (min-width: 927px) {
+
 }
