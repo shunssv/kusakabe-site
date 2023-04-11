@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.scss';
-import { HomeLayout } from '@/components/Layout/HomeLayout';
 import Image from 'next/image';
-import { MediaList } from '@/components/MediaList';
 import Link from 'next/link';
+import { HomeLayout } from '@/components/Layout/HomeLayout';
+import { MediaList } from '@/components/MediaList';
+import mvCherry from '../assets/mv-icon.svg';
 
 export default function Home() {
   return (
@@ -19,22 +20,21 @@ export default function Home() {
             <h2 className={styles.mvImages}>
               <Image
                 src="/mv.svg"
-                width={700}
-                height={500}
+                width={1000}
+                height={400}
                 alt="shun kusakabe"
                 className={styles.mv}
                 priority
               />
               <Image
-                src="/mv-icon.svg"
-                width={30}
-                height={40}
+                src={mvCherry}
                 alt="shun kusakabe"
                 className={styles.mvItem}
+                sizes="100vw"
                 priority
               />
             </h2>
-            <MediaList />
+            <MediaList style={styles.topMediaList} />
           </div>
         </section>
 

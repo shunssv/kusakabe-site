@@ -3,9 +3,9 @@ import { Github } from '../Media/Github';
 import { Linkedin } from '../Media/Linkedin';
 import { Twitter } from '../Media/Twitter';
 
-export function MediaList() {
+export function MediaList({ style }) {
   return (
-    <ul role="list" className={styles.snsList}>
+    <ul role="list" className={`${styles.snsList} ${style}`}>
       <li>
         <Twitter url="https://twitter.com/shunssv" />
       </li>

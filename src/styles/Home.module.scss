@@ -16,19 +16,20 @@
         margin: 0 auto;
       }
       .mvItem {
-        bottom: 8px;
-        left: 88px;
+        bottom: 7%;
+        height: auto;
+        left: 26%;
         position: absolute;
-        transform: rotate(-5deg);
+        transform: rotate(4deg);
+        width: 7%;
       }
     }
   }
 }
 
 .worksContainer {
-  padding: 10% 4% 30%;
   background: linear-gradient(260deg, #fdfbfb 0%, #ebedee 100%) fixed;
-  // background: linear-gradient(to top, #dfe9f3 0%, white 100%) fixed;
+  padding: 10% 4% 30%;
   .title {
     font-size: 6rem;
   }
@@ -47,8 +48,8 @@
       font-weight: bold;
     }
     dd:last-of-type {
-      margin-top: 1.5em;
       font-size: 0.75rem;
+      margin-top: 1.5em;
     }
   }
   &:not(:first-of-type) {
@@ -62,25 +63,25 @@
   position: relative;
   &::before {
     content: '';
-    display: inline-block;
-    width: 85%;
-    height: 125px;
     background: url(/home-bg-arch-sp.png) left / 100% no-repeat;
+    display: inline-block;
+    height: 125px;
+    left: 8%;
     position: absolute;
     top: -55px;
-    left: 8%;
+    width: 85%;
   }
   .aboutInner {
     background-color: #fff;
-    padding: 20% 7%;
     border-radius: 70px 70px 0 0;
+    padding: 20% 7%;
     .title {
       font-size: 3rem;
     }
     .personalInfo {
       .name {
-        display: flex;
         align-items: flex-end;
+        display: flex;
         column-gap: 0.5em;
         margin-top: 1em;
         h4 {
@@ -107,13 +108,25 @@
 
 /* ========= Tablet and PC layout ========= */
 @media (min-width: 521px) {
+  .worksContainer {
+    .title {
+      font-size: 12rem;
+    }
+  }
   .worksItemContainer {
     .worksInfo {
       margin: -30px 20px 0 auto;
     }
   }
-  .aboutContainer::before {
-    background: url(/home-bg-arch-pc.png) left / 100% no-repeat;
+  .aboutContainer {
+    &::before {
+      background: url(/home-bg-arch-pc.png) left / 100% no-repeat;
+    }
+    .aboutInner {
+      .title {
+        font-size: 6rem;
+      }
+    }
   }
 }
 
@@ -122,10 +135,38 @@
   .aboutContainer {
     padding: 7% 10% 15%;
   }
+  .mvContainer {
+    .mvInner {
+      padding: 20% 2% 5%;
+      .mvImages {
+        margin-bottom: 20%;
+      }
+    }
+  }
 }
 
 /* ============ PC layout only ============ */
 @media (min-width: 1181px) {
+  .mvContainer {
+    .mvInner {
+      padding: 13% 2% 13%;
+      position: relative;
+      .mvImages {
+        margin-bottom: 0;
+        .mvItem {
+          bottom: 7%;
+          left: 34%;
+          width: 4%;
+        }
+      }
+      .topMediaList {
+        bottom: 50px;
+        flex-direction: column;
+        position: absolute;
+        right: 50px;
+      }
+    }
+  }
   .worksItemContainer {
     h4 {
       margin-left: 2em;
