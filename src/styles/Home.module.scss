@@ -35,6 +35,9 @@
   }
 }
 .worksItemContainer {
+  h4 {
+    width: fit-content;
+  }
   .worksInfo {
     background-color: #403527;
     color: #fff;
@@ -167,6 +170,9 @@
       }
     }
   }
+  .worksContainer {
+    padding: 4% 4% 20%;
+  }
   .worksItemContainer {
     h4 {
       margin-left: 2em;
@@ -174,8 +180,12 @@
       z-index: 1;
     }
     .worksInfo {
-      margin: -180px 0 0 0;
-      padding: 2em 1.25em 4em 48em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: -225px 0 0 0;
+      min-height: 28vh;
+      padding: 3em 1.25em 3em 49em;
       width: 100%;
       z-index: 0;
       dt {
@@ -183,10 +193,17 @@
       }
       dd:first-of-type {
         font-size: 1.25rem;
+        flex: 1;
       }
       dd:last-of-type {
         font-size: 1rem;
       }
+      a:hover {
+        border: solid 1px #8b7353;
+      }
+    }
+    &:not(:first-of-type) {
+      margin-top: 6%;
     }
   }
 }

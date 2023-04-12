@@ -41,23 +41,23 @@ export default function Home() {
         <article className={styles.worksContainer}>
           <h3 className={styles.title}>works</h3>
           <section className={styles.worksItemContainer}>
-            <Link href="/works/enk-english">
               <h4>
-                <Image
-                  src="/works1.jpg"
-                  width={700}
-                  height={500}
-                  alt="ENK English"
-                  className={styles.worksImage}
-                  priority
-                />
+                <Link href="/works/enk-english">
+                  <Image
+                    src="/works1.jpg"
+                    width={700}
+                    height={500}
+                    alt="ENK English"
+                    className={styles.worksImage}
+                    priority
+                  />
+                </Link>
               </h4>
               <dl className={styles.worksInfo}>
                 <dt>enk-english.online</dt>
                 <dd>ENK English</dd>
                 <dd>WordPress - original theme</dd>
               </dl>
-            </Link>
           </section>
           <section className={styles.worksItemContainer}>
             <Link href="/works/enk-english">
