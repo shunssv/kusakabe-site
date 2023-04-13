@@ -122,10 +122,14 @@
     }
   }
   .aboutContainer {
+    background: url('/home-bg-about.png') 0% 100% ;
     &::before {
-      background: url(/home-bg-arch-pc.png) left / 100% no-repeat;
+      background: none
     }
     .aboutInner {
+      margin: 0 auto;
+      max-width: 980px;
+      width: 80%;
       .title {
         font-size: 6rem;
       }
@@ -135,9 +139,6 @@
 
 /* ========== Tablet layout only ========== */
 @media (min-width: 521px) and (max-width: 1180px) {
-  .aboutContainer {
-    padding: 7% 10% 15%;
-  }
   .mvContainer {
     .mvInner {
       padding: 20% 2% 5%;
@@ -145,6 +146,9 @@
         margin-bottom: 20%;
       }
     }
+  }
+  .aboutContainer {
+    padding: 7% 10% 15%;
   }
 }
 
@@ -204,6 +208,31 @@
     }
     &:not(:first-of-type) {
       margin-top: 6%;
+    }
+  }
+  .aboutContainer {
+    background: url(/home-bg-about.png) center / cover no-repeat;
+    padding: 6% 0 0;
+    margin-top: -100px;
+    min-height: 130vh;
+    .aboutInner {
+      border-radius: 0;
+      margin: 120px auto 0;
+      padding: 0% 7% 10%;
+      position: relative;
+      z-index: 1;
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 200px;
+        background-color: #fff;
+        position: absolute;
+        top: -100px;
+        left: 0;
+        border-radius: 50%;
+        z-index: -1;
+      }
     }
   }
 }
