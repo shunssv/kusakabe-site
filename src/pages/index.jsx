@@ -78,25 +78,6 @@ export default function Home() {
               </dl>
             </Link>
           </section>
-          <section className={styles.worksItemContainer}>
-            <Link href="/works/enk-english">
-              <h4>
-                <Image
-                  src="/works1.jpg"
-                  width={700}
-                  height={500}
-                  alt="ENK English"
-                  className={styles.worksImage}
-                  priority
-                />
-              </h4>
-              <dl className={styles.worksInfo}>
-                <dt>beauty-cream_lp</dt>
-                <dd>assignment</dd>
-                <dd>Vanilla HTML / CSS / JavaScript (jQuery)</dd>
-              </dl>
-            </Link>
-          </section>
         </article>
 
         <section className={styles.aboutContainer}>

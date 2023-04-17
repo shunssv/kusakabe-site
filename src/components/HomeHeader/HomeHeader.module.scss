@@ -1,6 +1,9 @@
 /*================ common ================*/
 .header {
-  background: url('/home-bg-brick.jpg') 0% 100%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
   .name {
     color: #4B4B4B;
     font-weight: normal;

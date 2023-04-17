@@ -4,8 +4,8 @@
 }
 
 .mvContainer {
-  background: url('/home-bg-brick.jpg') 0% 100% ;
-  padding: 0 4% 13%;
+  background: url(/home-background-brick.png) left center / cover;
+  padding: 13% 4%;
   .mvInner {
     background-color: #fff;
     padding: 35% 2% 5%;
@@ -61,7 +61,7 @@
 }
 
 .aboutContainer {
-  background: url('/home-bg-arch.png') top center / cover;
+  background: url('/home-background-brick.png') top center / cover;
   padding: 10% 8% 20%;
   position: relative;
   .aboutInner {
@@ -143,6 +143,7 @@
 /* ========== Tablet layout only ========== */
 @media (min-width: 521px) and (max-width: 1180px) {
   .mvContainer {
+    padding: 75px 4% 125px;
     .mvInner {
       padding: 20% 2% 5%;
       .mvImages {
@@ -165,6 +166,7 @@
 /* ============ PC layout only ============ */
 @media (min-width: 1181px) {
   .mvContainer {
+    padding: 75px 4% 200px;
     .mvInner {
       padding: 13% 2% 13%;
       position: relative;
@@ -185,7 +187,7 @@
     }
   }
   .worksContainer {
-    padding: 4% 4% 20%;
+    padding: 4% 4% 12%;
   }
   .worksItemContainer {
     h4 {
