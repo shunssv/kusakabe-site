@@ -61,23 +61,27 @@
 }
 
 .aboutContainer {
-  background: url('/home-bg-brick.jpg') 0% 100% ;
-  padding: 0% 8% 15%;
+  background: url('/home-bg-arch.png') top center / cover;
+  padding: 10% 8% 20%;
   position: relative;
-  &::before {
-    content: '';
-    background: url(/home-bg-arch-sp.png) left / 100% no-repeat;
-    display: inline-block;
-    height: 125px;
-    left: 8%;
-    position: absolute;
-    top: -55px;
-    width: 85%;
-  }
   .aboutInner {
     background-color: #fff;
-    border-radius: 70px 70px 0 0;
-    padding: 20% 7%;
+    padding: 0% 7% 20%;
+    margin: 100px auto 0;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 150px;
+      background-color: #fff;
+      position: absolute;
+      top: -75px;
+      left: 0;
+      border-radius: 50%;
+      z-index: -1;
+    }
     .title {
       font-size: 3rem;
     }
@@ -122,14 +126,13 @@
     }
   }
   .aboutContainer {
-    background: url('/home-bg-about.png') 0% 100% ;
-    &::before {
-      background: none
-    }
     .aboutInner {
-      margin: 0 auto;
       max-width: 980px;
       width: 80%;
+      &::before {
+        height: 200px;
+        top: -100px;
+      }
       .title {
         font-size: 6rem;
       }
@@ -148,7 +151,14 @@
     }
   }
   .aboutContainer {
-    padding: 7% 10% 15%;
+    padding: 10% 0% 13%;
+    .aboutInner {
+      padding: 0% 7% 10%;
+      &::before {
+        height: 200px;
+        top: -100px;
+      }
+    }
   }
 }
 
@@ -211,27 +221,12 @@
     }
   }
   .aboutContainer {
-    background: url(/home-bg-about.png) top center / cover no-repeat;
-    padding: 6% 0 0;
-    margin-top: -7%;
-    min-height: 1050px;
+    padding: 7% 0;
     .aboutInner {
-      border-radius: 0;
-      margin: 120px auto 0;
-      padding: 0% 7% 10%;
-      position: relative;
-      z-index: 1;
+      padding: 0% 4% 7%;
       &::before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 200px;
-        background-color: #fff;
-        position: absolute;
-        top: -100px;
-        left: 0;
-        border-radius: 50%;
-        z-index: -1;
+        height: 250px;
+        top: -125px;
       }
     }
   }
