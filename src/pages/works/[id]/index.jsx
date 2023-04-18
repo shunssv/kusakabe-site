@@ -2,12 +2,12 @@ import Head from 'next/head';
 import styles from './Works.module.scss';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { PrimaryLayout } from '@/components/Layout/PrimaryLayout';
+import { PrimaryLayout } from '@/components/Layouts/PrimaryLayout';
 import { Playfair_Display } from 'next/font/google';
 
-import { HiCode, HiLightningBolt, HiCog, HiChat } from "react-icons/hi";
-import { ButtonARight } from '@/components/ui/Button/ButtonARight';
-import { Button } from '@/components/ui/Button/Button';
+import { HiCode, HiLightningBolt, HiCog, HiChat } from 'react-icons/hi';
+import { ButtonARight } from '@/components/Buttons/ButtonARight';
+import { Button } from '@/components/Buttons/Button';
 
 const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
@@ -28,7 +28,9 @@ export default function Works(props) {
       </Head>
 
       <section className={styles.container}>
-        <h2 className={`${playfairDisplay.className} ${styles.title}`}>works</h2>
+        <h2 className={`${playfairDisplay.className} ${styles.title}`}>
+          works
+        </h2>
         <figure>
           <Image
             src="/works1.jpg"

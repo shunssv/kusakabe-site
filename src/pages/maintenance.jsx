@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '@/styles/Maintenance.module.scss';
 import { SlWrench } from 'react-icons/sl';
-import { PrimaryLayout } from '@/components/Layout/PrimaryLayout';
+import { PrimaryLayout } from '@/components/Layouts/PrimaryLayout';
 
 export default function Maintenance() {
   return (
@@ -18,13 +18,10 @@ export default function Maintenance() {
           <SlWrench className={styles.mainteinance} />
         </div>
       </section>
-      
     </>
   );
 }
 
 Maintenance.getLayout = function getLayout(page) {
-  return (
-    <PrimaryLayout>{page}</PrimaryLayout>
-  )
-}
+  return <PrimaryLayout>{page}</PrimaryLayout>;
+};

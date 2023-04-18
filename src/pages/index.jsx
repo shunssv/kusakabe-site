@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import { HomeLayout } from '@/components/Layout/HomeLayout';
+import { HomeLayout } from '@/components/Layouts/HomeLayout';
 import { MediaList } from '@/components/MediaList';
 import mvCherry from '../assets/mv-icon.svg';
 import works1 from '../assets/works1.jpg';
@@ -42,25 +42,27 @@ export default function Home() {
         <article className={styles.worksContainer}>
           <h3 className={styles.title}>works</h3>
           <section className={styles.worksItemContainer}>
-              <h4 className={styles.worksImageWrapper}>
-                <Link href="/works/enk-english">
-                  <Image
-                    src={works1}
-                    sizes="100vw"
-                    alt="ENK English"
-                    className={styles.worksImage}
-                    priority
-                  />
+            <h4 className={styles.worksImageWrapper}>
+              <Link href="/works/enk-english">
+                <Image
+                  src={works1}
+                  sizes="100vw"
+                  alt="ENK English"
+                  className={styles.worksImage}
+                  priority
+                />
+              </Link>
+            </h4>
+            <dl className={styles.worksInfo}>
+              <dt className={styles.domain}>enk-english.online</dt>
+              <dd className={styles.name}>ENK English</dd>
+              <dd className={styles.features}>WordPress - original theme</dd>
+              <dd>
+                <Link href="/works/enk-english" className={styles.button}>
+                  view details
                 </Link>
-              </h4>
-              <dl className={styles.worksInfo}>
-                <dt className={styles.domain}>enk-english.online</dt>
-                <dd className={styles.name}>ENK English</dd>
-                <dd className={styles.features}>WordPress - original theme</dd>
-                <dd>
-                  <Link href="/works/enk-english" className={styles.button}>view details</Link>
-                </dd>
-              </dl>
+              </dd>
+            </dl>
           </section>
         </article>
 
@@ -97,7 +99,11 @@ export default function Home() {
                 I believe that my experiences and skills help you out. Please
                 feel free to DM me if you are interested.
               </p>
-              <p>Thank you for taking the time to read this.<br />Bye for now!</p>
+              <p>
+                Thank you for taking the time to read this.
+                <br />
+                Bye for now!
+              </p>
             </div>
           </div>
         </section>
