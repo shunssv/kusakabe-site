@@ -1,36 +1,275 @@
 .container {
-  background-color: #403527;
+  background-color: #fff;
+  color: #4B4B4B;
 }
 
-.mainteinanceContainer {
-  font-size: 1.5rem;
-  padding: 3em 0;
-  text-align: center;
-}
-
-.mainteinance {
-  display: inline-block;
-  margin: 0 0.5em;
-  vertical-align: middle;
-}
-
-/*============ SP layout only ============*/
-@media screen and (max-width: 520px) {
-  .container {
-    padding: 25% 4%;
+.mvContainer {
+  background: url(/home-background-brick.png) left center / cover;
+  padding: 13% 4%;
+  .mvInner {
+    background-color: #fff;
+    padding: 35% 2% 5%;
+    .mvImages {
+      margin-bottom: 30%;
+      position: relative;
+      .mv {
+        margin: 0 auto;
+      }
+      .mvItem {
+        bottom: 7%;
+        height: auto;
+        left: 26%;
+        position: absolute;
+        transform: rotate(4deg);
+        width: 7%;
+      }
+    }
   }
 }
 
-/*========== Tablet layout only ==========*/
-@media screen and (min-width: 521px) and (max-width: 926px) {
-  .container {
-    padding: 20% 4%;
+.worksContainer {
+  background: linear-gradient(260deg, #fdfbfb 0%, #ebedee 100%) fixed;
+  padding: 10% 4% 30%;
+  .title {
+    font-size: 6rem;
+  }
+}
+.worksItemContainer {
+  .worksImageWrapper {
+    outline: 1px solid #bfb38e;
+    outline-offset: -10px;
+  }
+  .worksInfo {
+    background-color: #403527;
+    color: #fff;
+    padding: 1em 1.5em 4em;
+    position: relative;
+    z-index: 1;
+    .domain {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    .button {
+      border: solid 1px #fff;
+      border-radius: 25px;
+      bottom: 9%;
+      padding: 0.5em 1em;
+      position: absolute;
+      right: 4%;
+      text-align: center;
+      width: 130px;
+    }
+  }
+  &:not(:first-of-type) {
+    margin-top: 15%;
   }
 }
 
-/*============ PC layout only ============*/
-@media screen and (min-width: 927px) {
-  .container {
-    padding: 6% 4%;
+.aboutContainer {
+  background: url('/home-background-brick.png') top center / cover;
+  padding: 10% 8% 20%;
+  position: relative;
+  .aboutInner {
+    background-color: #fff;
+    padding: 0% 7% 20%;
+    margin: 100px auto 0;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 150px;
+      background-color: #fff;
+      position: absolute;
+      top: -75px;
+      left: 0;
+      border-radius: 50%;
+      z-index: -1;
+    }
+    .title {
+      font-size: 3rem;
+    }
+    .personalInfo {
+      .name {
+        align-items: flex-end;
+        display: flex;
+        column-gap: 0.5em;
+        margin-top: 1em;
+        h4 {
+          font-size: 1.25rem;
+        }
+        span {
+          font-size: 0.75rem;
+        }
+      }
+    }
+    .description {
+      margin-top: 2em;
+      p + p {
+        margin-top: 1em;
+      }
+    }
+  }
+}
+
+/* ============ SP layout only ============ */
+@media (max-width: 520px) {
+  .worksInfo {
+    .features {
+      font-size: 0.75rem;
+      margin-top: 1.5em;
+    }
+  }
+}
+
+/* ========= Tablet and PC layout ========= */
+@media (min-width: 521px) {
+  .worksContainer {
+    .title {
+      font-size: 12rem;
+    }
+  }
+  .worksItemContainer {
+    .worksImageWrapper {
+      outline-offset: -20px;
+    }
+  }
+  .aboutContainer {
+    .aboutInner {
+      max-width: 980px;
+      width: 80%;
+      &::before {
+        height: 200px;
+        top: -100px;
+      }
+      .title {
+        font-size: 6rem;
+      }
+    }
+  }
+}
+
+/* ========== Tablet layout only ========== */
+@media (min-width: 521px) and (max-width: 1180px) {
+  .mvContainer {
+    padding: 75px 4% 125px;
+    .mvInner {
+      padding: 20% 2% 5%;
+      .mvImages {
+        margin-bottom: 20%;
+      }
+    }
+  }
+  .worksItemContainer {
+    .worksInfo {
+      padding: 2em 2em 4em;
+      .domain {
+        font-size: 2rem;
+      }
+      .name {
+        font-size: 1.25rem;
+      }
+      .features {
+        font-size: 1rem;
+        margin-top: 1.5em;
+      }
+      .button {
+        width: 200px;
+        bottom: 10%;
+        font-size: 1.25rem;
+      }
+    }
+  }
+  .aboutContainer {
+    padding: 10% 0% 13%;
+    .aboutInner {
+      padding: 0% 7% 10%;
+      &::before {
+        height: 200px;
+        top: -100px;
+      }
+    }
+  }
+}
+
+/* ============ PC layout only ============ */
+@media (min-width: 1181px) {
+  .mvContainer {
+    padding: 75px 4% 200px;
+    .mvInner {
+      padding: 13% 2% 13%;
+      position: relative;
+      .mvImages {
+        margin-bottom: 0;
+        .mvItem {
+          bottom: 7%;
+          left: 34%;
+          width: 4%;
+        }
+      }
+      .topMediaList {
+        bottom: 50px;
+        flex-direction: column;
+        position: absolute;
+        right: 50px;
+      }
+    }
+  }
+  .worksContainer {
+    padding: 4% 4% 12%;
+  }
+  .worksItemContainer {
+    .worksImageWrapper {
+      cursor: pointer;
+      margin-left: 2em;
+      position: relative;
+      width: 700px;
+      z-index: 1;
+    }
+    .worksInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: -225px 0 0 0;
+      min-height: 28vh;
+      padding: 3em 1.25em 3em 49em;
+      width: 100%;
+      z-index: 0;
+      .domain {
+        font-size: 2.5rem;
+      }
+      .name {
+        flex: 1;
+        font-size: 1.5rem;
+      }
+      .features {
+        font-size: 1.25rem;
+      }
+      .button {
+        bottom: 14%;
+        font-size: 1.25rem;
+        right: 3%;
+        width: 250px;
+        transition: background-color 0.5s, border 0.5s;
+      }
+      a:hover {
+        background-color: #bfb38e;
+        border: solid 1px #bfb38e;
+      }
+    }
+    &:not(:first-of-type) {
+      margin-top: 6%;
+    }
+  }
+  .aboutContainer {
+    padding: 7% 0;
+    .aboutInner {
+      padding: 0% 4% 7%;
+      &::before {
+        height: 250px;
+        top: -125px;
+      }
+    }
   }
 }

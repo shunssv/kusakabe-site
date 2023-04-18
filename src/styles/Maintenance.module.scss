@@ -1,0 +1,36 @@
+.container {
+  background-color: #403527;
+}
+
+.mainteinanceContainer {
+  font-size: 1.5rem;
+  padding: 3em 0;
+  text-align: center;
+}
+
+.mainteinance {
+  display: inline-block;
+  margin: 0 0.5em;
+  vertical-align: middle;
+}
+
+/*============ SP layout only ============*/
+@media screen and (max-width: 520px) {
+  .container {
+    padding: 25% 4%;
+  }
+}
+
+/*========== Tablet layout only ==========*/
+@media screen and (min-width: 521px) and (max-width: 926px) {
+  .container {
+    padding: 20% 4%;
+  }
+}
+
+/*============ PC layout only ============*/
+@media screen and (min-width: 927px) {
+  .container {
+    padding: 6% 4%;
+  }
+}

@@ -2,15 +2,10 @@
   background-color: #fff;
   color: #4b4b4b;
   text-align: center;
-
-  .snsList {
-    column-gap: 1.5em;
-    display: flex;
-    justify-content: center;
-    padding: 3em 5em;
-  }
-  
+  padding-top: 5em;
   .copyright {
+    display: inline-block;
     font-size: 0.5rem;
+    margin-top: 15em;
   }
 }
