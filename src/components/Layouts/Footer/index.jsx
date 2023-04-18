@@ -1,6 +1,6 @@
 import styles from './Footer.module.scss';
 import { Lora } from 'next/font/google';
-import { MediaList } from '../MediaList';
+import { MediaList } from '@/components/MediaList';
 
 const lora = Lora({ subsets: ['latin'] });
 

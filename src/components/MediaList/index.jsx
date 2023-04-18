@@ -1,7 +1,7 @@
 import styles from './MediaList.module.scss';
-import { Github } from '../Media/Github';
-import { Linkedin } from '../Media/Linkedin';
-import { Twitter } from '../Media/Twitter';
+import { Github } from './Logos/Github';
+import { Linkedin } from './Logos/Linkedin';
+import { Twitter } from './Logos/Twitter';
 
 export function MediaList({ style }) {
   return (
