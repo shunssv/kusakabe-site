@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '@/styles/maintenance.module.scss';
+import styles from '@/styles/Maintenance.module.scss';
 import { SlWrench } from 'react-icons/sl';
 import { PrimaryLayout } from '@/components/Layout/PrimaryLayout';
 
