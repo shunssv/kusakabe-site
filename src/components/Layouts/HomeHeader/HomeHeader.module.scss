@@ -2,24 +2,23 @@
 
 .header {
   left: 50%;
+  padding: 0.5em 0;
   position: absolute;
   top: 0;
   transform: translateX(-50%);
+  
+  @include m.mq(tabAndPc) {
+    padding: 1em 0;
+  }
+
   .name {
     color: #4B4B4B;
     font-weight: normal;
     text-align: center;
-  }
-  
-  @include m.mq(sp) {
-    padding: 0.5em 0;
-    .name {
+
+    @include m.mq(sp) {
       font-size: 1.5rem;
       line-height: 1;
     }
-  }
-
-  @include m.mq(tabAndPc) {
-    padding: 1em 0;
   }
 }

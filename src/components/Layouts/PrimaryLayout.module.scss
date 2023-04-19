@@ -2,10 +2,7 @@
 
 .wrapper {
   background-color: #f2f2f2;
-
-  @include m.mq(sp) {
-    padding: 0 3% 30%;
-  }
+  padding: 0 3% 30%;
 
   @include m.mq(tab) {
     padding: 0 3% 25%;
