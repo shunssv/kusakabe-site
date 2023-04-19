@@ -1,17 +1,14 @@
-/*================ common ================*/
+@use '@/styles/media-query' as m;
+
 .header {
   background-color: #f2f2f2;
-  
   .name {
     color: #4B4B4B;
     font-weight: normal;
     text-align: center;
   }
-}
 
-/*============ SP layout only ============*/
-@media screen and (max-width: 520px) {
-  .header {
+  @include m.mq(sp) {
     padding: 0.5em 0;
     
     .name {
@@ -19,11 +16,10 @@
       line-height: 1;
     }
   }
-}
-
-/*========= Tablet and PC layout =========*/
-@media screen and (min-width: 521px) {
-  .header {
-    padding: 1em 0;
+  
+  @include m.mq(tabAndPc) {
+    .header {
+      padding: 1em 0;
+    }
   }
 }

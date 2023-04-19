@@ -1,4 +1,5 @@
-/*================ common ================*/
+@use '@/styles/media-query' as m;
+
 .header {
   left: 50%;
   position: absolute;
@@ -9,23 +10,16 @@
     font-weight: normal;
     text-align: center;
   }
-}
-
-/*============ SP layout only ============*/
-@media screen and (max-width: 520px) {
-  .header {
+  
+  @include m.mq(sp) {
     padding: 0.5em 0;
-    
     .name {
       font-size: 1.5rem;
       line-height: 1;
     }
   }
-}
 
-/*========= Tablet and PC layout =========*/
-@media screen and (min-width: 521px) {
-  .header {
+  @include m.mq(tabAndPc) {
     padding: 1em 0;
   }
 }

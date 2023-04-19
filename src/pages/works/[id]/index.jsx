@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from './Works.module.scss';
+import styles from '@/styles/Works.module.scss';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { PrimaryLayout } from '@/components/Layouts/PrimaryLayout';
