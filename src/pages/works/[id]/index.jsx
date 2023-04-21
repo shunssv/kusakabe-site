@@ -1,13 +1,13 @@
 import Head from 'next/head';
-import styles from './Works.module.scss';
 import Image from 'next/image';
+import styles from '@/styles/Works.module.scss';
 import { useRouter } from 'next/router';
 import { PrimaryLayout } from '@/components/Layouts/PrimaryLayout';
 import { Playfair_Display } from 'next/font/google';
-
 import { HiCode, HiLightningBolt, HiCog, HiChat } from 'react-icons/hi';
 import { ButtonARight } from '@/components/Buttons/ButtonARight';
 import { Button } from '@/components/Buttons/Button';
+import worksImage from '@/assets/works1.jpg';
 
 const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
@@ -33,10 +33,10 @@ export default function Works(props) {
         </h2>
         <figure>
           <Image
-            src="/works1.jpg"
-            width={700}
-            height={500}
+            src={worksImage}
+            sizes="100vw"
             alt={worksList[0].name}
+            className={styles.worksImage}
             priority
           />
         </figure>

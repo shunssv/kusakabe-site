@@ -1,13 +1,13 @@
 .loaderWrapper {
-  background-color: #403527;
+  background-color: var(--font-color-brown);
   display: block;
   height: 100vh;
   left: 0;
+  pointer-events: none;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
-  pointer-events: none;
 }
 
 .loaderContainer {
@@ -16,34 +16,34 @@
 }
 
 .loader {
-  width: 48px;
+  background: var(--background-color-white);
+  border-radius: 15% 15% 35% 35%;
+  display: inline-block;
   height: 40px;
   margin-top: 30px;
-  display: inline-block;
   position: relative;
-  background: #FFF;
-  border-radius: 15% 15% 35% 35%;
+  width: 48px;
+
   &::after {
-    content: '';  
-    box-sizing: border-box;
-    position: absolute;
-    left: 45px;
-    top: 8px;
-    border: 4px solid #FFF;
-    width: 16px;
-    height: 20px;
+    border: 4px solid var(--line-color-white);
     border-radius: 0 4px 4px 0;
-  }
-  &::before {
     content: '';  
+    height: 20px;
+    left: 45px;
     position: absolute;
-    width: 1px;
-    height: 10px;
-    color: #FFF;
-    top: -15px;
-    left: 11px;
-    box-sizing: border-box;
+    top: 8px;
+    width: 16px;
+  }
+
+  &::before {
     animation: animloader 1s ease infinite;
+    color: var(--font-color-white);
+    content: '';  
+    height: 10px;
+    left: 11px;
+    position: absolute;
+    top: -15px;
+    width: 1px;
   }
 }
 

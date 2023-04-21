@@ -1,20 +1,48 @@
+@use 'media-query' as m;
+
 .container {
-  background-color: #fff;
-  color: #4B4B4B;
+  background-color: var(--background-color-white);
+  color: var(--font-color-black);
 }
 
 .mvContainer {
   background: url(/home-background-brick.png) left center / cover;
   padding: 13% 4%;
+
+  @include m.mq(tab) {
+    padding: 75px 4% 125px;
+  }
+  @include m.mq(pc) {
+    padding: 75px 4% 200px;
+  }
+
   .mvInner {
-    background-color: #fff;
+    background-color: var(--background-color-white);
     padding: 35% 2% 5%;
+
+    @include m.mq(tab) {
+      padding: 20% 2% 5%;
+    }
+    @include m.mq(pc) {
+      padding: 13% 2% 13%;
+      position: relative;
+    }
+
     .mvImages {
       margin-bottom: 30%;
       position: relative;
+
+      @include m.mq(tab) {
+        margin-bottom: 20%;
+      }
+      @include m.mq(pc) {
+        margin-bottom: 0;
+      }
+  
       .mv {
         margin: 0 auto;
       }
+  
       .mvItem {
         bottom: 7%;
         height: auto;
@@ -22,6 +50,19 @@
         position: absolute;
         transform: rotate(4deg);
         width: 7%;
+
+        @include m.mq(pc) {
+          left: 34%;
+          width: 4%;
+        }
+      }
+    }
+    .topMediaList {
+      @include m.mq(pc) {
+        bottom: 50px;
+        flex-direction: column;
+        position: absolute;
+        right: 50px;
       }
     }
   }
@@ -30,204 +71,57 @@
 .worksContainer {
   background: linear-gradient(260deg, #fdfbfb 0%, #ebedee 100%) fixed;
   padding: 10% 4% 30%;
+
+  @include m.mq(pc) {
+    padding: 4% 4% 12%;
+  }
+
   .title {
     font-size: 6rem;
-  }
-}
-.worksItemContainer {
-  .worksImageWrapper {
-    outline: 1px solid #bfb38e;
-    outline-offset: -10px;
-  }
-  .worksInfo {
-    background-color: #403527;
-    color: #fff;
-    padding: 1em 1.5em 4em;
-    position: relative;
-    z-index: 1;
-    .domain {
-      font-size: 1.25rem;
-      font-weight: bold;
-    }
-    .button {
-      border: solid 1px #fff;
-      border-radius: 25px;
-      bottom: 9%;
-      padding: 0.5em 1em;
-      position: absolute;
-      right: 4%;
-      text-align: center;
-      width: 130px;
-    }
-  }
-  &:not(:first-of-type) {
-    margin-top: 15%;
-  }
-}
-
-.aboutContainer {
-  background: url('/home-background-brick.png') top center / cover;
-  padding: 10% 8% 20%;
-  position: relative;
-  .aboutInner {
-    background-color: #fff;
-    padding: 0% 7% 20%;
-    margin: 100px auto 0;
-    position: relative;
-    z-index: 1;
-    &::before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 150px;
-      background-color: #fff;
-      position: absolute;
-      top: -75px;
-      left: 0;
-      border-radius: 50%;
-      z-index: -1;
-    }
-    .title {
-      font-size: 3rem;
-    }
-    .personalInfo {
-      .name {
-        align-items: flex-end;
-        display: flex;
-        column-gap: 0.5em;
-        margin-top: 1em;
-        h4 {
-          font-size: 1.25rem;
-        }
-        span {
-          font-size: 0.75rem;
-        }
-      }
-    }
-    .description {
-      margin-top: 2em;
-      p + p {
-        margin-top: 1em;
-      }
-    }
-  }
-}
-
-/* ============ SP layout only ============ */
-@media (max-width: 520px) {
-  .worksInfo {
-    .features {
-      font-size: 0.75rem;
-      margin-top: 1.5em;
-    }
-  }
-}
-
-/* ========= Tablet and PC layout ========= */
-@media (min-width: 521px) {
-  .worksContainer {
-    .title {
+    
+    @include m.mq(tabAndPc) {
       font-size: 12rem;
     }
   }
-  .worksItemContainer {
-    .worksImageWrapper {
+}
+
+.worksItemContainer {
+
+  &:not(:first-of-type) {
+    margin-top: 15%;
+    
+    @include m.mq(pc) {
+        margin-top: 6%;
+    }
+  }
+
+  .worksImageWrapper {
+    outline: 1px solid var(--line-color-gold);
+    outline-offset: -10px;
+
+    @include m.mq(tabAndPc) {
       outline-offset: -20px;
     }
-  }
-  .aboutContainer {
-    .aboutInner {
-      max-width: 980px;
-      width: 80%;
-      &::before {
-        height: 200px;
-        top: -100px;
-      }
-      .title {
-        font-size: 6rem;
-      }
-    }
-  }
-}
-
-/* ========== Tablet layout only ========== */
-@media (min-width: 521px) and (max-width: 1180px) {
-  .mvContainer {
-    padding: 75px 4% 125px;
-    .mvInner {
-      padding: 20% 2% 5%;
-      .mvImages {
-        margin-bottom: 20%;
-      }
-    }
-  }
-  .worksItemContainer {
-    .worksInfo {
-      padding: 2em 2em 4em;
-      .domain {
-        font-size: 2rem;
-      }
-      .name {
-        font-size: 1.25rem;
-      }
-      .features {
-        font-size: 1rem;
-        margin-top: 1.5em;
-      }
-      .button {
-        width: 200px;
-        bottom: 10%;
-        font-size: 1.25rem;
-      }
-    }
-  }
-  .aboutContainer {
-    padding: 10% 0% 13%;
-    .aboutInner {
-      padding: 0% 7% 10%;
-      &::before {
-        height: 200px;
-        top: -100px;
-      }
-    }
-  }
-}
-
-/* ============ PC layout only ============ */
-@media (min-width: 1181px) {
-  .mvContainer {
-    padding: 75px 4% 200px;
-    .mvInner {
-      padding: 13% 2% 13%;
-      position: relative;
-      .mvImages {
-        margin-bottom: 0;
-        .mvItem {
-          bottom: 7%;
-          left: 34%;
-          width: 4%;
-        }
-      }
-      .topMediaList {
-        bottom: 50px;
-        flex-direction: column;
-        position: absolute;
-        right: 50px;
-      }
-    }
-  }
-  .worksContainer {
-    padding: 4% 4% 12%;
-  }
-  .worksItemContainer {
-    .worksImageWrapper {
+    @include m.mq(pc) {
       cursor: pointer;
       margin-left: 2em;
       position: relative;
       width: 700px;
       z-index: 1;
     }
-    .worksInfo {
+  }
+
+  .worksInfo {
+    background-color: var(--background-color-brown);
+    color: var(--font-color-white);
+    padding: 1em 1.5em 4em;
+    position: relative;
+    z-index: 1;
+
+    @include m.mq(tab) {
+      padding: 2em 2em 4em;
+    }
+    @include m.mq(pc) {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -236,39 +130,157 @@
       padding: 3em 1.25em 3em 49em;
       width: 100%;
       z-index: 0;
-      .domain {
+
+      a:hover {
+        background-color: var(--background-color-gold);
+        border: solid 1px var(--line-color-gold);
+      }
+    }
+
+    .domain {
+      font-size: 1.25rem;
+      font-weight: bold;
+
+      @include m.mq(tab) {
+        font-size: 2rem;
+      }
+      @include m.mq(pc) {
         font-size: 2.5rem;
       }
-      .name {
+    }
+
+    .name {
+      @include m.mq(tab) {
+        font-size: 1.25rem;
+      }
+      @include m.mq(pc) {
         flex: 1;
         font-size: 1.5rem;
       }
-      .features {
+    }
+
+    .features {
+      font-size: 0.75rem;
+      margin-top: 1.5em;
+
+      @include m.mq(tab) {
+        font-size: 1rem;
+      }
+      @include m.mq(pc) {
+        font-size: 1.25rem;
+        margin-top: 0;
+      }
+    }
+
+    .button {
+      border: solid 1px var(--line-color-white);
+      border-radius: 25px;
+      bottom: 9%;
+      padding: 0.5em 1em;
+      position: absolute;
+      right: 4%;
+      text-align: center;
+      width: 130px;
+      
+      @include m.mq(tabAndPc) {
         font-size: 1.25rem;
       }
-      .button {
+      @include m.mq(tab) {
+        bottom: 10%;
+        width: 200px;
+      }
+      @include m.mq(pc) {
         bottom: 14%;
-        font-size: 1.25rem;
         right: 3%;
         width: 250px;
         transition: background-color 0.5s, border 0.5s;
       }
-      a:hover {
-        background-color: #bfb38e;
-        border: solid 1px #bfb38e;
-      }
-    }
-    &:not(:first-of-type) {
-      margin-top: 6%;
     }
   }
-  .aboutContainer {
+}
+
+.aboutContainer {
+  background: url('/home-background-brick.png') top center / cover;
+  padding: 10% 8% 20%;
+  position: relative;
+
+  @include m.mq(tab) {
+    padding: 10% 0% 13%;
+  }
+  @include m.mq(pc) {
     padding: 7% 0;
-    .aboutInner {
+  }
+  
+  .aboutInner {
+    background-color: var(--background-color-white);
+    padding: 0% 7% 20%;
+    margin: 100px auto 0;
+    position: relative;
+    z-index: 1;
+    
+    @include m.mq(tabAndPc) {
+      max-width: 980px;
+      width: 80%;
+    }
+    @include m.mq(tab) {
+      padding: 0% 7% 10%;
+    }
+    @include m.mq(pc) {
       padding: 0% 4% 7%;
-      &::before {
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 150px;
+      background-color: var(--background-color-white);
+      position: absolute;
+      top: -75px;
+      left: 0;
+      border-radius: 50%;
+      z-index: -1;
+
+      @include m.mq(tab) {
+        height: 200px;
+        top: -100px;
+      }
+      @include m.mq(pc) {
         height: 250px;
         top: -125px;
+      }
+    }
+
+    .title {
+      font-size: 3rem;
+
+      @include m.mq(tabAndPc) {
+        font-size: 6rem;
+      }
+    }
+
+    .personalInfo {
+      .name {
+        align-items: flex-end;
+        display: flex;
+        column-gap: 0.5em;
+        margin-top: 1em;
+        
+        h4 {
+          font-size: 1.25rem;
+        }
+        
+        span {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    .description {
+      margin-top: 2em;
+      
+      p + p {
+        margin-top: 1em;
       }
     }
   }

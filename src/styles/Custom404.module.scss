@@ -1,109 +1,76 @@
-/*================ common ================*/
+@use 'media-query' as m;
+
 .container {
-  background-color: #403527;
+  background-color: var(--background-color-brown);
+  padding: 25% 4%;
   position: relative;
+
+  @include m.mq(tab) {
+    padding: 20% 4%;
+  }
+  @include m.mq(pc) {
+    padding: 6% 4%;
+  }
 }
 
 .img404 {
   margin: 0 auto;
 }
+
+.title {
+  color: var(--font-color-brown);
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+
+  @include m.mq(sp) {
+    font-size: 4.5rem;
+    top: 22%;
+  }
+  @include m.mq(tabAndPc) {
+    font-size: 6rem;
+  }
+  @include m.mq(tab) {
+    top: 27%;
+  }
+  @include m.mq(pc) {
+    top: 25%;
+  }
+}
+
+.inner {
+  padding: 3em 0 2em;
+  position: relative;
+
+  @include m.mq(tabAndPc) {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
 .textWrapper {
   position: absolute;
+
+  @include m.mq(sp) {
+    right: 3%;
+    top: -60%;
+  }
+  @include m.mq(tabAndPc) {
+    right: 10%;
+    top: -90%;
+  }
+}
+
+.subtitle {
+  font-size: 2rem;
 }
 
 .leadtext {
   font-weight: normal;
+  font-size: 1.25rem;
 }
 
 .text {
   text-align: center;
-}
-
-/*============ SP layout only ============*/
-@media screen and (max-width: 520px) {
-  .container {
-    padding: 25% 4%;
-  }
-
-  .title {
-    color: #403527;
-    font-size: 4.5rem;
-    left: 50%;
-    top: 22%;
-    transform: translateX(-50%);
-    position: absolute;
-  }
-
-  .inner {
-    padding: 3em 0 2em;
-    position: relative;
-  }
-
-  .textWrapper {
-    right: 3%;
-    top: -60%;
-  }
-
-  .subtitle {
-    font-size: 2rem;
-  }
-
-  .leadtext {
-    font-size: 1.25rem;
-  }
-}
-
-/*========= Tablet and PC layout =========*/
-@media screen and (min-width: 521px) {
-  .title {
-    color: #403527;
-    font-size: 6rem;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    position: absolute;
-  }
-  
-  .inner {
-    margin: 0 auto;
-    max-width: 500px;
-    padding: 3em 0 2em;
-    position: relative;
-    width: 100%;
-  }
-  
-  .textWrapper {
-    right: 10%;
-    top: -90%;
-  }
-
-  .subtitle {
-    font-size: 2rem;
-  }
-  
-  .leadtext {
-    font-size: 1.25rem;
-  }
-}
-
-/*========== Tablet layout only ==========*/
-@media screen and (min-width: 521px) and (max-width: 926px) {
-  .container {
-    padding: 20% 4%;
-  }
-  
-  .title {
-    top: 27%;
-  }
-}
-
-/*============ PC layout only ============*/
-@media screen and (min-width: 927px) {
-  .container {
-    padding: 6% 4%;
-  }
-
-  .title {
-    top: 25%;
-  }
 }

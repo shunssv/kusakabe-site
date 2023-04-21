@@ -1,0 +1,35 @@
+$breakpoints: (
+  sp: '(max-width: 520px)',
+  tabAndPc: '(min-width: 521px)',
+  tab: '(min-width: 521px) and (max-width: 1180px)',
+  pc: '(min-width: 1181px)'
+);
+
+@mixin mq($key) {
+  @media #{map-get($breakpoints, $key)} {
+    @content;
+  }
+}
+
+/* ==== SNIPET ====
+
+@use 'media-query' as m;
+@use '@/styles/media-query' as m;
+
+selector {
+
+  @include m.mq(sp) {
+    
+  }
+  @include m.mq(tabAndPc) {
+    
+  }
+  @include m.mq(tab) {
+    
+  }
+  @include m.mq(pc) {
+    
+  }
+}
+
+================ */
