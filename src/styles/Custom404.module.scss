@@ -1,9 +1,9 @@
 @use 'media-query' as m;
 
 .container {
-  background-color: #403527;
-  position: relative;
+  background-color: var(--background-color-brown);
   padding: 25% 4%;
+  position: relative;
 
   @include m.mq(tab) {
     padding: 20% 4%;
@@ -18,7 +18,7 @@
 }
 
 .title {
-  color: #403527;
+  color: var(--font-color-brown);
   left: 50%;
   transform: translateX(-50%);
   position: absolute;

@@ -1,7 +1,7 @@
 @use '@/styles/media-query' as m;
 
 .wrapper {
-  background-color: #f2f2f2;
+  background-color: var(--background-color-offwhite);
   padding: 0 3% 30%;
 
   @include m.mq(tab) {

@@ -1,7 +1,7 @@
 @use 'media-query' as m;
 
 .container {
-  background-color: #403527;
+  background-color: var(--background-color-brown);
 
   @include m.mq(sp) {
     padding: 5% 4% 25%;
@@ -27,7 +27,7 @@
   }
 
   &::after {
-    border: solid 0.5px #ccc;
+    border: solid 0.5px var(--line-color-grey);
     content: '';
     display: inline-block;
     position: absolute;
@@ -109,8 +109,8 @@
 }
 
 .comment {
-  background-color: #f2f2f2;
-  color: #4b4b4b;
+  background-color: var(--background-color-offwhite);
+  color: var(--font-color-black);
   margin-top: 1.5em;
   padding: 1.5em;
 
@@ -134,15 +134,15 @@
     padding-top: 1.5em;
     
     .category {
-      border-bottom: solid 0.5px #ccc;
+      border-bottom: solid 0.5px var(--line-color-grey);
       display: flex;
       justify-content: space-between;
     }
 
     .badge {
-      border: solid 0.5px #ccc;
+      border: solid 0.5px var(--line-color-grey);
       border-radius: 22px;
-      color: #ccc;
+      color: var(--font-color-grey);
       display: inline-block;
       font-size: 0.875rem;
       margin-top: 0.5em;

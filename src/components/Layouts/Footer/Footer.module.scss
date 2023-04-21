@@ -1,8 +1,9 @@
 .footer {
-  background-color: #fff;
-  color: #4b4b4b;
+  background-color: var(--background-color-white);
+  color: var(--font-color-black);
   text-align: center;
   padding-top: 5em;
+  
   .copyright {
     display: inline-block;
     font-size: 0.5rem;
