@@ -13,14 +13,13 @@ const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
 export default function Works(props) {
   const router = useRouter();
-  const id = router.query.id;
+  const { id } = router.query;
 
-  const worksList = props.worksList;
-
+  const worksDetail = props.worksDetail;
   return (
     <>
       <Head>
-        <title>{worksList[0].name} | Works | shun kusakabe</title>
+        <title>{works.name} | Works | shun kusakabe</title>
         <meta
           name="description"
           content="This page is for showcases that I have developed so far. I am shun kusakabe."
@@ -35,7 +34,7 @@ export default function Works(props) {
           <Image
             src={worksImage}
             sizes="100vw"
-            alt={worksList[0].name}
+            alt={works.name}
             className={styles.worksImage}
             priority
           />
@@ -48,12 +47,12 @@ export default function Works(props) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {worksList[0].domain}
+                {works.domain}
               </a>
             </h3>
-            <h4 className={styles.name}>{worksList[0].name}</h4>
-            <p className={styles.summary}>{worksList[0].summary}</p>
-            <p className={styles.comment}>{worksList[0].comment}</p>
+            <h4 className={styles.name}>{works.name}</h4>
+            <p className={styles.summary}>{works.summary}</p>
+            <p className={styles.comment}>{works.comment}</p>
           </div>
           <div className={styles.prerequisitesContainer}>
             <h3>prerequisites</h3>
@@ -61,48 +60,48 @@ export default function Works(props) {
               <dt className={styles.category}>
                 languages <HiCode />
               </dt>
-              <dd className={styles.badge}>{worksList[0].languages[0]}</dd>
-              <dd className={styles.badge}>{worksList[0].languages[1]}</dd>
-              <dd className={styles.badge}>{worksList[0].languages[2]}</dd>
-              <dd className={styles.badge}>{worksList[0].languages[3]}</dd>
+              <dd className={styles.badge}>{works.languages[0]}</dd>
+              <dd className={styles.badge}>{works.languages[1]}</dd>
+              <dd className={styles.badge}>{works.languages[2]}</dd>
+              <dd className={styles.badge}>{works.languages[3]}</dd>
             </dl>
             <dl className={styles.prerequisitesItem}>
               <dt className={styles.category}>
                 frameworks / libraries / systems <HiLightningBolt />
               </dt>
-              <dd className={styles.badge}>{worksList[0].frameworks[0]}</dd>
-              <dd className={styles.badge}>{worksList[0].frameworks[1]}</dd>
+              <dd className={styles.badge}>{works.frameworks[0]}</dd>
+              <dd className={styles.badge}>{works.frameworks[1]}</dd>
             </dl>
             <dl className={styles.prerequisitesItem}>
               <dt className={styles.category}>
                 tools <HiCog />
               </dt>
-              <dd className={styles.badge}>{worksList[0].tools[0]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[1]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[2]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[3]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[4]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[5]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[6]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[7]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[8]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[9]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[10]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[11]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[12]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[13]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[14]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[15]}</dd>
-              <dd className={styles.badge}>{worksList[0].tools[16]}</dd>
+              <dd className={styles.badge}>{works.tools[0]}</dd>
+              <dd className={styles.badge}>{works.tools[1]}</dd>
+              <dd className={styles.badge}>{works.tools[2]}</dd>
+              <dd className={styles.badge}>{works.tools[3]}</dd>
+              <dd className={styles.badge}>{works.tools[4]}</dd>
+              <dd className={styles.badge}>{works.tools[5]}</dd>
+              <dd className={styles.badge}>{works.tools[6]}</dd>
+              <dd className={styles.badge}>{works.tools[7]}</dd>
+              <dd className={styles.badge}>{works.tools[8]}</dd>
+              <dd className={styles.badge}>{works.tools[9]}</dd>
+              <dd className={styles.badge}>{works.tools[10]}</dd>
+              <dd className={styles.badge}>{works.tools[11]}</dd>
+              <dd className={styles.badge}>{works.tools[12]}</dd>
+              <dd className={styles.badge}>{works.tools[13]}</dd>
+              <dd className={styles.badge}>{works.tools[14]}</dd>
+              <dd className={styles.badge}>{works.tools[15]}</dd>
+              <dd className={styles.badge}>{works.tools[16]}</dd>
             </dl>
             <dl className={styles.prerequisitesItem}>
               <dt className={styles.category}>
                 roles <HiChat />
               </dt>
-              <dd className={styles.badge}>{worksList[0].roles[0]}</dd>
-              <dd className={styles.badge}>{worksList[0].roles[1]}</dd>
-              <dd className={styles.badge}>{worksList[0].roles[2]}</dd>
-              <dd className={styles.badge}>{worksList[0].roles[3]}</dd>
+              <dd className={styles.badge}>{works.roles[0]}</dd>
+              <dd className={styles.badge}>{works.roles[1]}</dd>
+              <dd className={styles.badge}>{works.roles[2]}</dd>
+              <dd className={styles.badge}>{works.roles[3]}</dd>
             </dl>
           </div>
         </div>
@@ -115,18 +114,29 @@ export default function Works(props) {
   );
 }
 
-//path (id) names
+//fetching data from the JSON file
+import fsPromises from 'fs/promises';
+import path from 'path';
+
 export async function getStaticPaths() {
+  const filePath = path.join(process.cwd(), 'data.json');
+  const jsonData = await fsPromises.readFile(filePath);
+  const objectData = JSON.parse(jsonData);
+
+  const worksPaths = objectData.worksIds; 
+
+  const paths = worksPaths.map((worksPath) => ({
+    params: { id: worksPath.id },
+  }));
+
   return {
-    paths: [{ params: { id: 'enk-english' } }, { params: { id: '2' } }],
+    paths,
     fallback: false,
   };
 }
 
-//fetching data from the JSON file
-import fsPromises from 'fs/promises';
-import path from 'path';
-export async function getStaticProps() {
+export async function getStaticProps( {params} ) {
+  const id = params.id;
   const filePath = path.join(process.cwd(), 'data.json');
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
