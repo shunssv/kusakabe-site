@@ -1,29 +1,21 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '@/styles/Works.module.scss';
-import { useRouter } from 'next/router';
 import { PrimaryLayout } from '@/components/Layouts/PrimaryLayout';
 import { Playfair_Display } from 'next/font/google';
 import { HiCode, HiLightningBolt, HiCog, HiChat } from 'react-icons/hi';
 import { ButtonARight } from '@/components/Buttons/ButtonARight';
 import { Button } from '@/components/Buttons/Button';
-import worksImage from '@/assets/works1.jpg';
+import { workImage } from '@/assets/';
 
 const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
-export default function Works(props) {
-  const router = useRouter();
-  const { id } = router.query;
-
-  const worksDetail = props.worksDetail;
+export default function Works({ detail }) {
   return (
     <>
       <Head>
-        <title>{works.name} | Works | shun kusakabe</title>
-        <meta
-          name="description"
-          content="This page is for showcases that I have developed so far. I am shun kusakabe."
-        />
+        <title>{detail.name} | Works | shun kusakabe</title>
+        <meta name="description" content={detail.description} />
       </Head>
 
       <section className={styles.container}>
@@ -32,9 +24,10 @@ export default function Works(props) {
         </h2>
         <figure>
           <Image
-            src={worksImage}
+            src={workImage}
+            // src={detail.image}
             sizes="100vw"
-            alt={works.name}
+            alt={detail.name}
             className={styles.worksImage}
             priority
           />
@@ -42,17 +35,13 @@ export default function Works(props) {
         <div className={styles.detailWrapper}>
           <div className={styles.informationContainer}>
             <h3 className={styles.domain}>
-              <a
-                href="https://enk-english.online/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {works.domain}
+              <a href={detail.url} target="_blank" rel="noopener noreferrer">
+                {detail.domain}
               </a>
             </h3>
-            <h4 className={styles.name}>{works.name}</h4>
-            <p className={styles.summary}>{works.summary}</p>
-            <p className={styles.comment}>{works.comment}</p>
+            <h4 className={styles.name}>{detail.name}</h4>
+            <p className={styles.summary}>{detail.summary}</p>
+            <p className={styles.comment}>{detail.comment}</p>
           </div>
           <div className={styles.prerequisitesContainer}>
             <h3>prerequisites</h3>
@@ -60,48 +49,49 @@ export default function Works(props) {
               <dt className={styles.category}>
                 languages <HiCode />
               </dt>
-              <dd className={styles.badge}>{works.languages[0]}</dd>
-              <dd className={styles.badge}>{works.languages[1]}</dd>
-              <dd className={styles.badge}>{works.languages[2]}</dd>
-              <dd className={styles.badge}>{works.languages[3]}</dd>
+              {detail.languages.map((language) => {
+                return (
+                  <dd key={language} className={styles.badge}>
+                    {language}
+                  </dd>
+                );
+              })}
             </dl>
             <dl className={styles.prerequisitesItem}>
               <dt className={styles.category}>
                 frameworks / libraries / systems <HiLightningBolt />
               </dt>
-              <dd className={styles.badge}>{works.frameworks[0]}</dd>
-              <dd className={styles.badge}>{works.frameworks[1]}</dd>
+              {detail.frameworks.map((framework) => {
+                return (
+                  <dd key={framework} className={styles.badge}>
+                    {framework}
+                  </dd>
+                );
+              })}
             </dl>
             <dl className={styles.prerequisitesItem}>
               <dt className={styles.category}>
                 tools <HiCog />
               </dt>
-              <dd className={styles.badge}>{works.tools[0]}</dd>
-              <dd className={styles.badge}>{works.tools[1]}</dd>
-              <dd className={styles.badge}>{works.tools[2]}</dd>
-              <dd className={styles.badge}>{works.tools[3]}</dd>
-              <dd className={styles.badge}>{works.tools[4]}</dd>
-              <dd className={styles.badge}>{works.tools[5]}</dd>
-              <dd className={styles.badge}>{works.tools[6]}</dd>
-              <dd className={styles.badge}>{works.tools[7]}</dd>
-              <dd className={styles.badge}>{works.tools[8]}</dd>
-              <dd className={styles.badge}>{works.tools[9]}</dd>
-              <dd className={styles.badge}>{works.tools[10]}</dd>
-              <dd className={styles.badge}>{works.tools[11]}</dd>
-              <dd className={styles.badge}>{works.tools[12]}</dd>
-              <dd className={styles.badge}>{works.tools[13]}</dd>
-              <dd className={styles.badge}>{works.tools[14]}</dd>
-              <dd className={styles.badge}>{works.tools[15]}</dd>
-              <dd className={styles.badge}>{works.tools[16]}</dd>
+              {detail.tools.map((tool) => {
+                return (
+                  <dd key={tool} className={styles.badge}>
+                    {tool}
+                  </dd>
+                );
+              })}
             </dl>
             <dl className={styles.prerequisitesItem}>
               <dt className={styles.category}>
                 roles <HiChat />
               </dt>
-              <dd className={styles.badge}>{works.roles[0]}</dd>
-              <dd className={styles.badge}>{works.roles[1]}</dd>
-              <dd className={styles.badge}>{works.roles[2]}</dd>
-              <dd className={styles.badge}>{works.roles[3]}</dd>
+              {detail.roles.map((role) => {
+                return (
+                  <dd key={role} className={styles.badge}>
+                    {role}
+                  </dd>
+                );
+              })}
             </dl>
           </div>
         </div>
@@ -123,7 +113,7 @@ export async function getStaticPaths() {
   const jsonData = await fsPromises.readFile(filePath);
   const objectData = JSON.parse(jsonData);
 
-  const worksPaths = objectData.worksIds; 
+  const worksPaths = objectData.worksList;
 
   const paths = worksPaths.map((worksPath) => ({
     params: { id: worksPath.id },
@@ -135,14 +125,13 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps( {params} ) {
-  const id = params.id;
-  const filePath = path.join(process.cwd(), 'data.json');
+export async function getStaticProps({ params }) {
+  const filePath = path.join(process.cwd(), `${params.id}.json`);
   const jsonData = await fsPromises.readFile(filePath);
-  const objectData = JSON.parse(jsonData);
+  const detail = JSON.parse(jsonData); //return Object
 
   return {
-    props: objectData,
+    props: { detail },
   };
 }
 
