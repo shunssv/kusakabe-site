@@ -1,15 +1,16 @@
 {
   "worksList": [
     {
-      "number": "1",
+      "number": 1,
+      "id": "enk-english",
       "domain": "enk-english.online",
-      "name": "ENK English",
-      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempor mauris ante, a efficitur leo elementum non. Proin ut congue nulla. Suspendisse efficitur non arcu ac pharetra. In auctor, nibh non lacinia convallis, nulla sapien tempus enim, ac convallis magna felis in diam. Vivamus massa velit, blandit ac libero non, luctus feugiat quam. Aenean metus odio, lacinia ultricies nisi id, fringilla mollis libero. Quisque finibus lorem at tellus ullamcorper, et cursus nibh lacinia. Suspendisse tincidunt tempor porttitor. Curabitur imperdiet tortor non ultricies sagittis. Cras velit diam, laoreet at pretium sit amet, posuere sit amet metus. Praesent vehicula mattis elit, ut pellentesque nisi vestibulum id. Nulla facilisi. Nulla in porta dolor, vel malesuada augue. Sed quis erat ac nulla condimentum faucibus.",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempor mauris ante, a efficitur leo elementum non. Proin ut congue nulla. Suspendisse efficitur non arcu ac pharetra. In auctor, nibh non lacinia convallis, nulla sapien tempus enim, ac convallis magna felis in diam. Vivamus massa velit, blandit ac libero non, luctus feugiat quam. Aenean metus odio, lacinia ultricies nisi id, fringilla mollis libero. Quisque finibus lorem at tellus ullamcorper, et cursus nibh lacinia. Suspendisse tincidunt tempor porttitor. Curabitur imperdiet tortor non ultricies sagittis. Cras velit diam, laoreet at pretium sit amet, posuere sit amet metus. Praesent vehicula mattis elit, ut pellentesque nisi vestibulum id. Nulla facilisi. Nulla in porta dolor, vel malesuada augue. Sed quis erat ac nulla condimentum faucibus.",
-      "languages": ["html", "css", "javascript", "php"],
-      "frameworks": ["wordpress", "jquery"],
-      "tools": ["notion", "clickup", "miro", "toggl", "pinterest", "xd", "photoshop", "illustrator", "google fonts", "adobe fonts", "adobe stock", "vscode", "local", "github", "git", "terminal", "filezilla"],
-      "roles": ["planning", "design", "coding", "updating"]
+      "name": "ENK English"
+    },
+    {
+      "number": 2,
+      "id": "beauty-cream-lp",
+      "domain": "beauty-cream_lp",
+      "name": "assignment"
     }
   ]
 }
