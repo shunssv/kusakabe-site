@@ -6,8 +6,11 @@ import { HomeLayout } from '@/components/Layouts/HomeLayout';
 import { MediaList } from '@/components/MediaList';
 import mvCherry from '../assets/mv-icon.svg';
 import works1 from '../assets/works1.jpg';
+import works2 from '../assets/works2.jpg';
 
-export default function Home() {
+export default function Home({ worksItems }) {
+  console.log(worksItems);
+
   return (
     <>
       <Head>
@@ -41,29 +44,33 @@ export default function Home() {
 
         <article className={styles.worksContainer}>
           <h3 className={styles.title}>works</h3>
-          <section className={styles.worksItemContainer}>
-            <h4 className={styles.worksImageWrapper}>
-              <Link href="/works/enk-english">
-                <Image
-                  src={works1}
-                  sizes="100vw"
-                  alt="ENK English"
-                  className={styles.worksImage}
-                  priority
-                />
-              </Link>
-            </h4>
-            <dl className={styles.worksInfo}>
-              <dt className={styles.domain}>enk-english.online</dt>
-              <dd className={styles.name}>ENK English</dd>
-              <dd className={styles.features}>WordPress - original theme</dd>
-              <dd>
-                <Link href="/works/enk-english" className={styles.button}>
-                  view details
-                </Link>
-              </dd>
-            </dl>
-          </section>
+          {worksItems.worksList.map((item) => {
+            return (
+              <section key={item.number} className={styles.worksItemContainer}>
+                <h4 className={styles.worksImageWrapper}>
+                  <Link href={`/works/${item.id}`}>
+                    <Image
+                      src={works2}
+                      sizes="100vw"
+                      alt="ENK English"
+                      className={styles.worksImage}
+                      priority
+                    />
+                  </Link>
+                </h4>
+                <dl className={styles.worksInfo}>
+                  <dt className={styles.domain}>{item.domain}</dt>
+                  <dd className={styles.name}>{item.name}</dd>
+                  <dd className={styles.features}>{item.features}</dd>
+                  <dd>
+                    <Link href={`/works/${item.id}`} className={styles.button}>
+                      view details
+                    </Link>
+                  </dd>
+                </dl>
+              </section>
+            );
+          })}
         </article>
 
         <section className={styles.aboutContainer}>
@@ -110,6 +117,19 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+import fsPromises from 'fs/promises';
+import path from 'path';
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'data.json');
+  const jsonData = await fsPromises.readFile(filePath);
+  const worksItems = JSON.parse(jsonData); //return Object
+
+  return {
+    props: { worksItems },
+  };
 }
 
 Home.getLayout = function getLayout(page) {

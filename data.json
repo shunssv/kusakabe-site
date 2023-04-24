@@ -4,13 +4,15 @@
       "number": 1,
       "id": "enk-english",
       "domain": "enk-english.online",
-      "name": "ENK English"
+      "name": "ENK English",
+      "features": "WordPress - original theme"
     },
     {
       "number": 2,
       "id": "beauty-cream-lp",
       "domain": "beauty-cream_lp",
-      "name": "assignment"
+      "name": "assignment",
+      "features": "Vanilla HTML / CSS / JavaScript (jQuery)"
     }
   ]
 }
