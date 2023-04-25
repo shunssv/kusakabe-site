@@ -6,7 +6,6 @@ import { Playfair_Display } from 'next/font/google';
 import { HiCode, HiLightningBolt, HiCog, HiChat } from 'react-icons/hi';
 import { ButtonARight } from '@/components/Buttons/ButtonARight';
 import { Button } from '@/components/Buttons/Button';
-import { workImage } from '@/assets/';
 
 const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
@@ -24,11 +23,11 @@ export default function Works({ detail }) {
         </h2>
         <figure>
           <Image
-            src={workImage}
-            // src={detail.image}
+            src={detail.image}
             sizes="100vw"
             alt={detail.name}
             className={styles.worksImage}
+            fill
             priority
           />
         </figure>

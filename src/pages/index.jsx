@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { HomeLayout } from '@/components/Layouts/HomeLayout';
 import { MediaList } from '@/components/MediaList';
 import mvCherry from '../assets/mv-icon.svg';
-import works1 from '../assets/works1.jpg';
-import works2 from '../assets/works2.jpg';
 
 export default function Home({ worksItems }) {
   console.log(worksItems);
@@ -50,10 +48,11 @@ export default function Home({ worksItems }) {
                 <h4 className={styles.worksImageWrapper}>
                   <Link href={`/works/${item.id}`}>
                     <Image
-                      src={works2}
+                      src={item.image}
                       sizes="100vw"
                       alt="ENK English"
                       className={styles.worksImage}
+                      fill
                       priority
                     />
                   </Link>

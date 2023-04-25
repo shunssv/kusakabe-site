@@ -1,8 +1,8 @@
-import workImage from './works1.jpg';
+// import workImage from './works1.jpg';
 
-export {
-  workImage
-};
+// export {
+//   workImage
+// };
 
 // on jsx file
 // import {
