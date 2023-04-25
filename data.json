@@ -5,14 +5,16 @@
       "id": "enk-english",
       "domain": "enk-english.online",
       "name": "ENK English",
-      "features": "WordPress - original theme"
+      "features": "WordPress - original theme",
+      "image": "/works1.jpg"
     },
     {
       "number": 2,
       "id": "beauty-cream-lp",
       "domain": "beauty-cream_lp",
       "name": "assignment",
-      "features": "Vanilla HTML / CSS / JavaScript (jQuery)"
+      "features": "Vanilla HTML / CSS / JavaScript (jQuery)",
+      "image": "/works2.jpg"
     }
   ]
 }
