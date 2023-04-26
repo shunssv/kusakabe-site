@@ -5,6 +5,7 @@ import { PrimaryLayout } from '@/components/Layouts/PrimaryLayout';
 import { Playfair_Display } from 'next/font/google';
 import { HiCode, HiLightningBolt, HiCog, HiChat } from 'react-icons/hi';
 import { ButtonARight } from '@/components/Buttons/ButtonARight';
+import { ButtonALeft } from '@/components/Buttons/ButtonALeft';
 import { Button } from '@/components/Buttons/Button';
 
 const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
@@ -95,8 +96,9 @@ export default function Works({ detail }) {
           </div>
         </div>
         <div className={styles.buttonWrapper}>
-          <ButtonARight url="/works/2" text="view next" />
+          <ButtonARight url="/works/2" text="next" />
           <Button url="/" text="go to home" />
+          <ButtonALeft url="/works/2" text="previous" />
         </div>
       </section>
     </>
