@@ -7,7 +7,6 @@ import { MediaList } from '@/components/MediaList';
 import mvCherry from '../assets/mv-icon.svg';
 
 export default function Home({ worksItems }) {
-  console.log(worksItems);
 
   return (
     <>
@@ -46,7 +45,7 @@ export default function Home({ worksItems }) {
             return (
               <section key={item.number} className={styles.worksItemContainer}>
                 <h4 className={styles.worksImageWrapper}>
-                  <Link href={`/works/${item.id}`}>
+                  <Link href={`/works/${item.slug}`}>
                     <Image
                       src={item.image}
                       sizes="100vw"
@@ -62,7 +61,7 @@ export default function Home({ worksItems }) {
                   <dd className={styles.name}>{item.name}</dd>
                   <dd className={styles.features}>{item.features}</dd>
                   <dd>
-                    <Link href={`/works/${item.id}`} className={styles.button}>
+                    <Link href={`/works/${item.slug}`} className={styles.button}>
                       view details
                     </Link>
                   </dd>

@@ -98,6 +98,8 @@
   .worksImageWrapper {
     outline: 1px solid var(--line-color-gold);
     outline-offset: -10px;
+    position: relative;
+    z-index: 1;
 
     @include m.mq(tabAndPc) {
       outline-offset: -20px;
@@ -105,9 +107,7 @@
     @include m.mq(pc) {
       cursor: pointer;
       margin-left: 2em;
-      position: relative;
       width: 700px;
-      z-index: 1;
     }
 
     .worksImage {

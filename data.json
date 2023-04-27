@@ -1,16 +1,16 @@
 {
   "worksList": [
     {
-      "number": 1,
-      "id": "enk-english",
+      "id": 1,
+      "slug": "enk-english",
       "domain": "enk-english.online",
       "name": "ENK English",
       "features": "WordPress - original theme",
       "image": "/works1.jpg"
     },
     {
-      "number": 2,
-      "id": "beauty-cream-lp",
+      "id": 2,
+      "slug": "beauty-cream-lp",
       "domain": "beauty-cream_lp",
       "name": "assignment",
       "features": "Vanilla HTML / CSS / JavaScript (jQuery)",

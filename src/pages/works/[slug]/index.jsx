@@ -7,10 +7,45 @@ import { HiCode, HiLightningBolt, HiCog, HiChat } from 'react-icons/hi';
 import { ButtonARight } from '@/components/Buttons/ButtonARight';
 import { ButtonALeft } from '@/components/Buttons/ButtonALeft';
 import { Button } from '@/components/Buttons/Button';
+import { useRouter } from 'next/router';
+import fsPromises from 'fs/promises';
+import path from 'path';
+import { useCallback, useEffect, useState } from 'react';
 
 const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
-export default function Works({ detail }) {
+export default function Works({ detail, previousPage, nextPage }) {
+  // const router = useRouter();
+  // const { id } = router.query;
+
+  // console.log(router);
+  // console.log(id);
+
+  // id === 'beauty-cream-lp' ? console.log('yes') : console.log('no');
+
+  // const [isShown, setIsShown] = useState(true);
+
+  // const handleDisplay = useCallback(() => {
+  //   setIsShown((isShown) => !isShown);
+  // }, []);
+
+  // useEffect(() => {
+  //   handleDisplay();
+  // }, [id]);
+
+  // const bgColor = useMemo(() =>
+  //   return router.pathname === '/' ? 'gray' : 'pink';
+  //   //can use switch instead
+  // }, [router.pathname]);
+
+  // useEffect(() => {
+  //   document.body.style.backgroundColor = bgColor;
+
+  //   return () => {
+  //     document.body.style.backgroundColor = '';
+  //   };
+  // }, [bgColor]
+
   return (
     <>
       <Head>
@@ -96,28 +131,24 @@ export default function Works({ detail }) {
           </div>
         </div>
         <div className={styles.buttonWrapper}>
-          <ButtonARight url="/works/2" text="next" />
+          {nextPage && <ButtonARight url={`/works/${nextPage}`} text="next page" />}
           <Button url="/" text="go to home" />
-          <ButtonALeft url="/works/2" text="previous" />
+          {previousPage && <ButtonALeft url={`/works/${previousPage}`} text="previous page" />}
         </div>
       </section>
     </>
   );
 }
 
-//fetching data from the JSON file
-import fsPromises from 'fs/promises';
-import path from 'path';
-
 export async function getStaticPaths() {
   const filePath = path.join(process.cwd(), 'data.json');
   const jsonData = await fsPromises.readFile(filePath);
-  const objectData = JSON.parse(jsonData);
+  const objectData = JSON.parse(jsonData); //return Object
 
-  const worksPaths = objectData.worksList;
+  const worksItems = objectData.worksList;
 
-  const paths = worksPaths.map((worksPath) => ({
-    params: { id: worksPath.id },
+  const paths = worksItems.map((worksItem) => ({
+    params: { slug: worksItem.slug },
   }));
 
   return {
@@ -127,16 +158,33 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const filePath = path.join(process.cwd(), `${params.id}.json`);
+  const { slug } = params;
+  const filePath = path.join(process.cwd(), `${slug}.json`);
   const jsonData = await fsPromises.readFile(filePath);
   const detail = JSON.parse(jsonData); //return Object
+  
+  const listFilePath = path.join(process.cwd(), 'data.json');
+  const listFileNames = await fsPromises.readFile(listFilePath);
+  const objectData = JSON.parse(listFileNames); //return Object
+
+  const worksItems = objectData.worksList;
+
+  const listItems = worksItems.map((item) => {
+    if (typeof item.slug !== 'string') {
+      return null;
+    }
+    return item.slug;
+  }).filter(Boolean);
+  
+  const currentIndex = listItems.findIndex((item) => item === slug);
+  const previousPage = listItems[currentIndex - 1] || null;
+  const nextPage = listItems[currentIndex + 1] || null;
 
   return {
-    props: { detail },
+    props: { detail, previousPage, nextPage },
   };
 }
 
-//layout
 Works.getLayout = function getLayout(page) {
   return <PrimaryLayout>{page}</PrimaryLayout>;
 };
