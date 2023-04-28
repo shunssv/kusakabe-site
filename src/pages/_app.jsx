@@ -1,6 +1,5 @@
 import '@/styles/reset.scss';
 import '@/styles/globals.scss';
-import 'animate.css';
 import Head from 'next/head';
 import { EB_Garamond } from 'next/font/google';
 
