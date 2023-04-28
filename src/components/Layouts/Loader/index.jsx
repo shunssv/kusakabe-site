@@ -1,4 +1,5 @@
 import styles from './Loader.module.scss';
+import animate from '@/styles/_animation.module.scss';
 import { useEffect, useState } from 'react';
 
 export function Loader() {
@@ -8,7 +9,7 @@ export function Loader() {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1500);
   }, []);
 
   return (
@@ -20,8 +21,8 @@ export function Loader() {
           </div>
         </div>
       ) : (
-        <div className={styles.loaderWrapper}>
-          <div className={styles.loaderContainer}>
+        <div className={`${styles.loaderWrapper} ${animate.fadeOut}`}>
+          <div className={`${styles.loaderContainer} ${animate.fadeOut} ${animate.durationFaster}`}>
             <span className={styles.loader}></span>
           </div>
         </div>
