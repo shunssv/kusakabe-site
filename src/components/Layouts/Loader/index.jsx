@@ -20,7 +20,7 @@ export function Loader() {
           </div>
         </div>
       ) : (
-        <div className={`${styles.loaderWrapper} animate__animated animate__fadeOut`}>
+        <div className={styles.loaderWrapper}>
           <div className={styles.loaderContainer}>
             <span className={styles.loader}></span>
           </div>
