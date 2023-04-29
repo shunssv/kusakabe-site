@@ -5,7 +5,7 @@ export function HomeLayout({ children }) {
   return (
     <>
       <HomeHeader />
-      <div>{children}</div>
+      <main>{children}</main>
       <Footer />
     </>
   );
