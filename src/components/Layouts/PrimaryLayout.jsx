@@ -6,7 +6,7 @@ export function PrimaryLayout({ children }) {
   return (
     <>
       <Header />
-      <div className={styles.wrapper}>{children}</div>
+      <main className={styles.wrapper}>{children}</main>
       <Footer />
     </>
   );
