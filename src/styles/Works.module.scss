@@ -2,10 +2,8 @@
 
 .container {
   background-color: var(--background-color-brown);
+  padding: 5% 4% 25%;
 
-  @include m.mq(sp) {
-    padding: 5% 4% 25%;
-  }
   @include m.mq(tab) {
     padding: 4% 4% 15%;
   }
