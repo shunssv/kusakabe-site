@@ -1,8 +1,12 @@
-// import workImage from './works1.jpg';
+import github from './sns-github.svg';
+import linkedin from './sns-linkedin.svg';
+import twitter from './sns-twitter.svg';
 
-// export {
-//   workImage
-// };
+export {
+  github,
+  linkedin,
+  twitter,
+};
 
 // on jsx file
 // import {
