@@ -1,10 +1,5 @@
 @use 'media-query' as m;
 
-.container {
-  background-color: var(--background-color-white);
-  color: var(--font-color-black);
-}
-
 .mvContainer {
   background: url(/home-background-brick.png) left center / cover;
   padding: 13% 4%;
