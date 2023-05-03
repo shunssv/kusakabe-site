@@ -5,15 +5,15 @@
       "slug": "enk-english",
       "domain": "enk-english.online",
       "name": "ENK English",
-      "features": "WordPress - original theme",
+      "features": "wordpress - original theme",
       "image": "/works1.jpg"
     },
     {
       "id": 2,
       "slug": "beauty-cream-lp",
       "domain": "beauty-cream_lp",
-      "name": "assignment",
-      "features": "Vanilla HTML / CSS / JavaScript (jQuery)",
+      "name": "Assignment",
+      "features": "html / css / jquery",
       "image": "/works2.jpg"
     }
   ]
