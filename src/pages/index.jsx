@@ -78,35 +78,20 @@ export default function Home({ worksItems }) {
               <h4>shun kusakabe</h4>
               <span>he/him</span>
             </div>
-            <p>web developer / ui designer</p>
+            <p>web developer / ui designer / project coordinator</p>
           </section>
           <div className={styles.description}>
             <p>
-              I make websites and design user interfaces , and am base in Los
-              Angeles, California. Let me introduce myself briefly. I was born
-              and raised in Yamagata which is located at the northern Japan,
-              called Tohoku. After graduating from a university in Tokyo, I
-              have worked for a website agency in Tokyo for approximately four
-              and half year. I am discovering my new career in City of Flowers
-              and Sunshine.
+              I am a web developer, UI designer, and project coordinator based in Los Angeles. Originally from Yamagata, Japan, I graduated from a university in Tokyo. I have over four years of experience working at a website agency in Tokyo, and I am excited to start my new career in Los Angeles.
             </p>
             <p>
-              If I have to describe myself within one sentence, I always look
-              for new things and dive into them as found. Listening pop music
-              is one of things I love to do in my spare time. I enjoy
-              exploring many songs and artists. Once I found songs which are
-              matched my taste, I listening to them over and over again.
-              Similarly, I would love to learn new something while working as
-              well and make use of them for my work.
+              My passion lies in creating beautiful and user-friendly websites that tell a story and engage their visitors. I specialize in web design and UI/UX development, using my skills in HTML, CSS, JavaScript, and various design tools to create seamless digital experiences. Whether it is building a new website from scratch or optimizing an existing one, I am always looking for new things to learn and try.
             </p>
             <p>
-              I believe that my experiences and skills help you out. Please
-              feel free to DM me if you are interested.
+              In addition to my work, I am a big fan of pop music and love discovering new songs and artists. I believe that staying curious and open-minded is key to both personal and professional growth.
             </p>
             <p>
-              Thank you for taking the time to read this.
-              <br />
-              Bye for now!
+              If you are looking for a dedicated and passionate web developer, UI designer, or project coordinator, I would love to work with you. Please feel free to contact me via DM to discuss your project further.
             </p>
           </div>
         </div>
