@@ -82,16 +82,16 @@ export default function Home({ worksItems }) {
           </section>
           <div className={styles.description}>
             <p>
-              I'm a web developer, UI designer, and project coordinator based in Los Angeles. Originally from Yamagata, Japan, I graduated from a university in Tokyo. I have over four years of experience working at a website agency in Tokyo, and I'm excited to start my new career in Los Angeles.
+              I am a web developer, UI designer, and project coordinator based in Los Angeles. Originally from Yamagata, Japan, I graduated from a university in Tokyo. I have over four years of experience working at a website agency in Tokyo, and I am excited to start my new career in Los Angeles.
             </p>
             <p>
-              My passion lies in creating beautiful and user-friendly websites that tell a story and engage their visitors. I specialize in web design and UI/UX development, using my skills in HTML, CSS, JavaScript, and various design tools to create seamless digital experiences. Whether it's building a new website from scratch or optimizing an existing one, I'm always looking for new things to learn and try.
+              My passion lies in creating beautiful and user-friendly websites that tell a story and engage their visitors. I specialize in web design and UI/UX development, using my skills in HTML, CSS, JavaScript, and various design tools to create seamless digital experiences. Whether it is building a new website from scratch or optimizing an existing one, I am always looking for new things to learn and try.
             </p>
             <p>
-              In addition to my work, I'm a big fan of pop music and love discovering new songs and artists. I believe that staying curious and open-minded is key to both personal and professional growth.
+              In addition to my work, I am a big fan of pop music and love discovering new songs and artists. I believe that staying curious and open-minded is key to both personal and professional growth.
             </p>
             <p>
-              If you're looking for a dedicated and passionate web developer, UI designer, or project coordinator, I would love to work with you. Please feel free to contact me via DM to discuss your project further.
+              If you are looking for a dedicated and passionate web developer, UI designer, or project coordinator, I would love to work with you. Please feel free to contact me via DM to discuss your project further.
             </p>
           </div>
         </div>
