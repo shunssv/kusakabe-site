@@ -49,7 +49,7 @@ export default function Works({ detail, previousPage, nextPage }) {
   return (
     <>
       <Head>
-        <title>{detail.name} | Works | shun kusakabe</title>
+        <title>{detail.name} | works | shun kusakabe</title>
         <meta name="description" content={detail.description} />
       </Head>
 
