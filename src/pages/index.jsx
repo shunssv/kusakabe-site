@@ -6,13 +6,23 @@ import { HomeLayout } from '@/components/Layouts/HomeLayout';
 import { MediaList } from '@/components/MediaList';
 import mvCherry from '../assets/mv-icon.svg';
 
-export default function Home({ worksItems }) {
+const HEADINFO = {
+  title: 'shun kusakabe',
+  description: 'I am a web developer, UI designer, and project coordinator with four years of experience at a website agency in Tokyo, currently based in Los Angeles. My passion lies in creating user-friendly websites that tell a story, and I specialize in web design and UI/UX development using HTML, CSS, JavaScript, and design tools. I am always eager to learn and enjoy exploring new things. If you are seeking a dedicated and passionate web developer, UI designer, or project coordinator, please feel free to contact me via DM.',
+  url: 'https://kusakabe-site.vercel.app/',
+  image: 'https://kusakabe-site.vercel.app/ogp.png'
+}
 
+export default function Home({ worksItems }) {
   return (
     <>
       <Head>
-        <title>shun kusakabe</title>
-        <meta name="description" content="I am a web developer, UI designer, and project coordinator with four years of experience at a website agency in Tokyo, currently based in Los Angeles. My passion lies in creating user-friendly websites that tell a story, and I specialize in web design and UI/UX development using HTML, CSS, JavaScript, and design tools. I am always eager to learn and enjoy exploring new things. If you are seeking a dedicated and passionate web developer, UI designer, or project coordinator, please feel free to contact me via DM." />
+        <title>{HEADINFO.title}</title>
+        <meta name="description" content={HEADINFO.description} />
+        <meta property="og:url" content={HEADINFO.url} />
+        <meta property="og:title" content={HEADINFO.title} />
+        <meta property="og:description" content={HEADINFO.description} />
+        <meta property="og:image" content={HEADINFO.image} />
       </Head>
 
       <section className={styles.mvContainer}>
