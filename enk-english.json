@@ -1,7 +1,8 @@
 {
   "id": 1,
   "slug": "enk-english",
-  "image": "/works1.jpg",
+  "thumbnail": "/works1.jpg",
+  "ogpImage": "/ogp-works1.png",
   "domain": "enk-english.online",
   "name": "ENK English",
   "description": "ENK English | ENK English is an English tutoring organization for Japanese students. The organization's main source of new customers was word-of-mouth referrals and a poster for promotion. I proposed building a website to reach more potential customers. The website has three main pages: Home, Contact, and 404. The Home page describes the organization's services and how it differs from other tutoring services. The Contact page provides contact information, and the 404 page provides a friendly message if a visitor tries to access a non-existent page. The website is designed to be friendly and approachable, with yellow and orange as the main colors. In the future, the website will be expanded to include members-only page for the students.",
