@@ -10,47 +10,22 @@ import { Button } from '@/components/Buttons/Button';
 import { useRouter } from 'next/router';
 import fsPromises from 'fs/promises';
 import path from 'path';
-import { useCallback, useEffect, useState } from 'react';
 
 const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
 export default function Works({ detail, previousPage, nextPage }) {
-  // const router = useRouter();
-  // const { id } = router.query;
-
-  // console.log(router);
-  // console.log(id);
-
-  // id === 'beauty-cream-lp' ? console.log('yes') : console.log('no');
-
-  // const [isShown, setIsShown] = useState(true);
-
-  // const handleDisplay = useCallback(() => {
-  //   setIsShown((isShown) => !isShown);
-  // }, []);
-
-  // useEffect(() => {
-  //   handleDisplay();
-  // }, [id]);
-
-  // const bgColor = useMemo(() =>
-  //   return router.pathname === '/' ? 'gray' : 'pink';
-  //   //can use switch instead
-  // }, [router.pathname]);
-
-  // useEffect(() => {
-  //   document.body.style.backgroundColor = bgColor;
-
-  //   return () => {
-  //     document.body.style.backgroundColor = '';
-  //   };
-  // }, [bgColor]
+  const router = useRouter();
+  const { slug } = router.query;
 
   return (
     <>
       <Head>
         <title>{detail.name} | works | shun kusakabe</title>
         <meta name="description" content={detail.description} />
+        <meta property="og:url" content={`https://kusakabe-site.vercel.app/works/${slug}`} />
+        <meta property="og:title" content={`${detail.name} | works | shun kusakabe`} />
+        <meta property="og:description" content={detail.description} />
+        <meta property="og:image" content={`https://kusakabe-site.vercel.app${detail.ogpImage}`} />
       </Head>
 
       <section className={styles.container}>
@@ -59,7 +34,7 @@ export default function Works({ detail, previousPage, nextPage }) {
         </h2>
         <figure>
           <Image
-            src={detail.image}
+            src={detail.thumbnail}
             sizes="100vw"
             alt={detail.name}
             className={styles.worksImage}

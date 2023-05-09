@@ -1,7 +1,8 @@
 {
   "id": 2,
   "slug": "beauty-cream-lp",
-  "image": "/works2.jpg",
+  "thumbnail": "/works2.jpg",
+  "ogpImage": "/ogp-works2.png",
   "domain": "beauty-cream_lp",
   "name": "Assignment",
   "description": "Assignment | This is a landing page created for a fictional beauty product as an assignment for Digital Hollywood online school. The target audience for this product is women aged 25 to 39 with an interest in skincare. The page has a calming design that complements the product's color scheme, making it visually appealing to the target audience. It includes a main visual, campaign banner, product description, steps to use the product, customer reviews, and an FAQ section.",
