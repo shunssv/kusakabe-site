@@ -52,11 +52,11 @@ export default function Home({ worksItems }) {
         <h3 className={styles.title}>works</h3>
         {worksItems.worksList.map((item) => {
           return (
-            <section key={item.number} className={styles.worksItemContainer}>
+            <section key={item.id} className={styles.worksItemContainer}>
               <h4 className={styles.worksImageWrapper}>
                 <Link href={`/works/${item.slug}`}>
                   <Image
-                    src={item.image}
+                    src={item.thumbnail}
                     sizes="100vw"
                     alt="ENK English"
                     className={styles.worksImage}

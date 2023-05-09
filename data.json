@@ -5,8 +5,8 @@
       "slug": "enk-english",
       "domain": "enk-english.online",
       "name": "ENK English",
-      "features": "wordpress - original theme",
-      "image": "/works1.jpg"
+      "features": "wordpress original theme",
+      "thumbnail": "/works1.jpg"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "domain": "beauty-cream_lp",
       "name": "Assignment",
       "features": "html / css / jquery",
-      "image": "/works2.jpg"
+      "thumbnail": "/works2.jpg"
     }
   ]
 }
