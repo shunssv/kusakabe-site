@@ -166,10 +166,12 @@
   a {
     @include m.mq(pc) {
       flex-basis: 200px;
-      margin: 0;
     }
 
     &:nth-child(1) {
+      @include m.mq(sp) {
+        margin: 0 auto;
+      }
       @include m.mq(pc) {
         order: 2;
       }
@@ -178,6 +180,12 @@
     &:nth-child(2) {
       @include m.mq(pc) {
         order: 1;
+      }
+    }
+
+    &:not(:first-child) {
+      @include m.mq(sp) {
+        margin: 10% auto 0;
       }
     }
   }

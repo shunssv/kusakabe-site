@@ -1,11 +1,19 @@
+@use '@/styles/media-query' as m;
+
 .btn {
   background-color: var(--background-color-gold);
   display: block;
-  margin: 1em auto 0;
   max-width: 200px;
-  padding: 0.5em 0;
+  padding: 0.75em 0;
   position: relative;
   text-align: center;
+  transition: opacity var(--transition-speed);
+
+  &:hover {
+    @include m.mq(pc) {
+      opacity: var(--opacity);
+    }
+  }
 
   .arrow {
     font-size: 0.75em;

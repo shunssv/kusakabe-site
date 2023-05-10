@@ -11,6 +11,10 @@
   @include m.mq(pc) {
     padding: 6% 4%;
   }
+
+  a {
+    margin: 0 auto;
+  }
 }
 
 .img404 {
