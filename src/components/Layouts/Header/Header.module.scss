@@ -19,3 +19,35 @@
     }
   }
 }
+
+.scrollToTopButton {
+  align-items: center;
+  background-color: var(--background-color-gold);
+  bottom: 1%;
+  color: var(--font-color-white);
+  display: flex;
+  font-size: 2.5rem;
+  height: 45px;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 2%;
+  transition: opacity var(--transition-speed);
+  user-select: none;
+  width: 45px;
+  z-index: 99;
+  
+  @include m.mq(pc) {
+    bottom: 2%;
+  }
+
+  .icon {
+    font-size: 1.125rem;
+  }
+}
+
+.scrollToTopButton.appear {
+  opacity: 1;
+  pointer-events: visible;
+}
