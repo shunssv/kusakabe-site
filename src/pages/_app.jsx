@@ -1,10 +1,13 @@
 import '@/styles/reset.scss';
 import '@/styles/globals.scss';
+import styles from '@/styles/scrollToTopButton.module.scss'
 import animates from '@/styles/_animation.module.scss';
 import { EB_Garamond } from 'next/font/google';
 import { Loader } from '@/components/Loader';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { SlArrowUp } from "react-icons/sl";
+import Link from 'next/link';
 
 const ebGaramond = EB_Garamond({ subsets: ['latin'] });
 
@@ -46,6 +49,10 @@ export default function App({ Component, pageProps }) {
         />
       )}
       <Component {...pageProps} />
+
+      <Link href="#" className={styles.scrollToTopButton}>
+        <SlArrowUp className={styles.icon} />
+      </Link>
     </>
   );
 }
