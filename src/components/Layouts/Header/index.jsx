@@ -3,6 +3,7 @@ import styles from './Header.module.scss';
 import { Playfair_Display } from 'next/font/google';
 import { useInView } from 'react-intersection-observer';
 import { SlArrowUp } from 'react-icons/sl';
+import { useCallback } from 'react';
 
 const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
@@ -10,6 +11,14 @@ export function Header() {
   const [ref, inView] = useInView({
     threshold: 0,
   });
+
+  const handleClick = useCallback((e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
 
   return (
     <>
@@ -30,6 +39,7 @@ export function Header() {
         <Link
           href="#"
           className={`${styles.scrollToTopButton} ${styles.appear}`}
+          onClick={handleClick}
         >
           <SlArrowUp className={styles.icon} />
         </Link>
