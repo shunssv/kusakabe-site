@@ -1,4 +1,4 @@
-@use 'media-query' as m;
+@use '@/styles/media-query' as m;
 
 .scrollToTopButton {
   align-items: center;
@@ -25,9 +25,4 @@
   .icon {
     font-size: 1.125rem;
   }
-}
-
-.scrollToTopButton.appear {
-  opacity: 1;
-  pointer-events: visible;
 }
