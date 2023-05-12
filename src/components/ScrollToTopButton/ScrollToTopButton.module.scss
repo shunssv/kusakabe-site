@@ -13,11 +13,12 @@
   pointer-events: none;
   position: fixed;
   right: 2%;
-  transition: opacity var(--transition-speed);
+  transition: opacity var(--transition-speed), visibility var(--transition-speed);
   user-select: none;
+  visibility: hidden;
   width: 45px;
   z-index: 99;
-  
+
   @include m.mq(pc) {
     bottom: 2%;
   }
