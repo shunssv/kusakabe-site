@@ -32,7 +32,6 @@ a {
 
 body {
   color: var(--font-color-white);
-  overflow: hidden;
 
   @include m.mq(sp) {
     font-size: 0.875rem;
