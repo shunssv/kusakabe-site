@@ -12,8 +12,6 @@ export function ScrollToTopButton({ appear }) {
     });
   }, []);
 
-  console.log(appear);
-
   return (
     <Link
       href="#"

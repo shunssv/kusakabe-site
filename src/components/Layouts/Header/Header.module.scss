@@ -22,6 +22,7 @@
 
 // style for scroll-to-top button component
 .appear {
-  opacity: 1;
-  pointer-events: visible;
+  opacity: 0.8 !important;
+  pointer-events: visible !important;
+  visibility: visible !important;
 }
