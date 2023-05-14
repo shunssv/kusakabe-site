@@ -22,10 +22,10 @@ export default function Works({ detail, previousPage, nextPage }) {
       <Head>
         <title>{detail.name} | works | shun kusakabe</title>
         <meta name="description" content={detail.description} />
-        <meta property="og:url" content={`https://kusakabe-site.vercel.app/works/${slug}`} />
+        <meta property="og:url" content={`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/works/${slug}`} />
         <meta property="og:title" content={`${detail.name} | works | shun kusakabe`} />
         <meta property="og:description" content={detail.description} />
-        <meta property="og:image" content={`https://kusakabe-site.vercel.app${detail.ogpImage}`} />
+        <meta property="og:image" content={`https://${process.env.NEXT_PUBLIC_VERCEL_URL}${detail.ogpImage}`} />
       </Head>
 
       <section className={styles.container}>
