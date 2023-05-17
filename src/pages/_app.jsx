@@ -56,6 +56,9 @@ export default function App({ Component, pageProps }) {
           font-family: ${ebGaramond.style.fontFamily};
         }
       `}</style>
+      
+
+        <Loader />
 
       {isLoading ? (
         <Loader />
