@@ -1,5 +1,6 @@
 import '@/styles/reset.scss';
 import '@/styles/globals.scss';
+import Head from 'next/head';
 import Script from 'next/script';
 import animates from '@/styles/_animation.module.scss';
 import { EB_Garamond } from 'next/font/google';
@@ -35,6 +36,9 @@ export default function App({ Component, pageProps }) {
 
   return getLayout(
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       {ENV === 'Production' && (
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
