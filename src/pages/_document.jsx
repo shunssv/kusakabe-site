@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import { GoogleTagManagerBelow } from '@/components/GoogleTagManagerBelow';
 
-const GTM_CONTAINER_ID = process.env.NEXT_PUBLIC_GTM_CONTAINER_ID;
 const ENV = process.env.NEXT_PUBLIC_VERCEL_ENV;
 
 export default function Document() {
@@ -38,16 +38,7 @@ export default function Document() {
         <link rel="icon" href="/favicons/favicon.ico" />
       </Head>
       <body>
-        {ENV === 'Production' && (
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${GTM_CONTAINER_ID}`}
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-            ></iframe>
-          </noscript>
-        )}
+        {ENV === 'Production' && <GoogleTagManagerBelow />}
         <Main />
         <NextScript />
       </body>
