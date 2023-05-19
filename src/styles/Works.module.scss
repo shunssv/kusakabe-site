@@ -58,19 +58,36 @@
 
 .detailWrapper {
   @include m.mq(pc) {
-    align-items: center;
+    margin-top: 3em;
+  }
+}
+
+.detailInformationWrapper {
+  @include m.mq(pc) {
+    align-items: flex-start;
     display: flex;
     gap: 4em;
-    margin-top: 3em;
+  }
+}
+
+.detailTitleContainer {
+  @include m.mq(sp) {
+    padding-top: 8%;
+  }
+  @include m.mq(tab) {
+    padding-top: 4%;
+  }
+  @include m.mq(pc) {
+    margin-bottom: 2.5em;
   }
 }
 
 .informationContainer {
   @include m.mq(sp) {
-    padding: 8% 0 20%;
+    padding-bottom: 20%;
   }
   @include m.mq(tab) {
-    padding: 4% 0 10%;
+    padding-bottom: 10%;
   }
   @include m.mq(pc) {
     flex: 1;
@@ -106,6 +123,9 @@
   @include m.mq(sp) {
     font-size: 0.875rem;
     padding: 0 4%;
+  }
+  @include m.mq(pc) {
+    margin-top: 0;
   }
 }
 
