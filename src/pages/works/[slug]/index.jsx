@@ -43,66 +43,70 @@ export default function Works({ detail, previousPage, nextPage }) {
           />
         </figure>
         <div className={styles.detailWrapper}>
-          <div className={styles.informationContainer}>
+          <div className={styles.detailTitleContainer}>
             <h3 className={styles.domain}>
               <a href={detail.url} target="_blank" rel="noopener noreferrer">
                 {detail.domain}
               </a>
             </h3>
             <h4 className={styles.name}>{detail.name}</h4>
-            <p className={styles.summary}>{detail.summary}</p>
-            <p className={styles.comment}>{detail.comment}</p>
           </div>
-          <div className={styles.prerequisitesContainer}>
-            <h3>prerequisites</h3>
-            <dl className={styles.prerequisitesItem}>
-              <dt className={styles.category}>
-                languages <HiCode />
-              </dt>
-              {detail.languages.map((language) => {
-                return (
-                  <dd key={language} className={styles.badge}>
-                    {language}
-                  </dd>
-                );
-              })}
-            </dl>
-            <dl className={styles.prerequisitesItem}>
-              <dt className={styles.category}>
-                frameworks / libraries / systems <HiLightningBolt />
-              </dt>
-              {detail.frameworks.map((framework) => {
-                return (
-                  <dd key={framework} className={styles.badge}>
-                    {framework}
-                  </dd>
-                );
-              })}
-            </dl>
-            <dl className={styles.prerequisitesItem}>
-              <dt className={styles.category}>
-                tools <HiCog />
-              </dt>
-              {detail.tools.map((tool) => {
-                return (
-                  <dd key={tool} className={styles.badge}>
-                    {tool}
-                  </dd>
-                );
-              })}
-            </dl>
-            <dl className={styles.prerequisitesItem}>
-              <dt className={styles.category}>
-                roles <HiChat />
-              </dt>
-              {detail.roles.map((role) => {
-                return (
-                  <dd key={role} className={styles.badge}>
-                    {role}
-                  </dd>
-                );
-              })}
-            </dl>
+          <div className={styles.detailInformationWrapper}>
+            <div className={styles.informationContainer}>
+              <p className={styles.summary}>{detail.summary}</p>
+              <p className={styles.comment}>{detail.comment}</p>
+            </div>
+            <div className={styles.prerequisitesContainer}>
+              <h3>prerequisites</h3>
+              <dl className={styles.prerequisitesItem}>
+                <dt className={styles.category}>
+                  languages <HiCode />
+                </dt>
+                {detail.languages.map((language) => {
+                  return (
+                    <dd key={language} className={styles.badge}>
+                      {language}
+                    </dd>
+                  );
+                })}
+              </dl>
+              <dl className={styles.prerequisitesItem}>
+                <dt className={styles.category}>
+                  frameworks / libraries / systems <HiLightningBolt />
+                </dt>
+                {detail.frameworks.map((framework) => {
+                  return (
+                    <dd key={framework} className={styles.badge}>
+                      {framework}
+                    </dd>
+                  );
+                })}
+              </dl>
+              <dl className={styles.prerequisitesItem}>
+                <dt className={styles.category}>
+                  tools <HiCog />
+                </dt>
+                {detail.tools.map((tool) => {
+                  return (
+                    <dd key={tool} className={styles.badge}>
+                      {tool}
+                    </dd>
+                  );
+                })}
+              </dl>
+              <dl className={styles.prerequisitesItem}>
+                <dt className={styles.category}>
+                  roles <HiChat />
+                </dt>
+                {detail.roles.map((role) => {
+                  return (
+                    <dd key={role} className={styles.badge}>
+                      {role}
+                    </dd>
+                  );
+                })}
+              </dl>
+            </div>
           </div>
         </div>
         <div className={styles.buttonWrapper}>
