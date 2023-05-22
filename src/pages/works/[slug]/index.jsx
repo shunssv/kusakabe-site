@@ -13,19 +13,19 @@ import path from 'path';
 
 const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
-export default function Works({ detail, previousPage, nextPage }) {
+export default function Works({ worksDetail, previousPage, nextPage }) {
   const router = useRouter();
   const { slug } = router.query;
 
   return (
     <>
       <Head>
-        <title>{detail.name} | works | shun kusakabe</title>
-        <meta name="description" content={detail.description} />
+        <title>{worksDetail.name} | works | shun kusakabe</title>
+        <meta name="description" content={worksDetail.description} />
         <meta property="og:url" content={`${process.env.NEXT_PUBLIC_VERCEL_URL}/works/${slug}`} />
-        <meta property="og:title" content={`${detail.name} | works | shun kusakabe`} />
-        <meta property="og:description" content={detail.description} />
-        <meta property="og:image" content={`${process.env.NEXT_PUBLIC_VERCEL_URL}${detail.ogpImage}`} />
+        <meta property="og:title" content={`${worksDetail.name} | works | shun kusakabe`} />
+        <meta property="og:description" content={worksDetail.description} />
+        <meta property="og:image" content={`${process.env.NEXT_PUBLIC_VERCEL_URL}${worksDetail.ogpImage}`} />
       </Head>
 
       <section className={styles.container}>
@@ -34,9 +34,9 @@ export default function Works({ detail, previousPage, nextPage }) {
         </h2>
         <figure>
           <Image
-            src={detail.thumbnail}
+            src={worksDetail.thumbnail}
             sizes="100vw"
-            alt={detail.name}
+            alt={worksDetail.name}
             className={styles.worksImage}
             fill
             priority
@@ -45,16 +45,16 @@ export default function Works({ detail, previousPage, nextPage }) {
         <div className={styles.detailWrapper}>
           <div className={styles.detailTitleContainer}>
             <h3 className={styles.domain}>
-              <a href={detail.url} target="_blank" rel="noopener noreferrer">
-                {detail.domain}
+              <a href={worksDetail.url} target="_blank" rel="noopener noreferrer">
+                {worksDetail.domain}
               </a>
             </h3>
-            <h4 className={styles.name}>{detail.name}</h4>
+            <h4 className={styles.name}>{worksDetail.name}</h4>
           </div>
           <div className={styles.detailInformationWrapper}>
             <div className={styles.informationContainer}>
-              <p className={styles.summary}>{detail.summary}</p>
-              <p className={styles.comment}>{detail.comment}</p>
+              <p className={styles.summary}>{worksDetail.summary}</p>
+              <p className={styles.comment}>{worksDetail.comment}</p>
             </div>
             <div className={styles.prerequisitesContainer}>
               <h3>prerequisites</h3>
@@ -62,7 +62,7 @@ export default function Works({ detail, previousPage, nextPage }) {
                 <dt className={styles.category}>
                   languages <HiCode />
                 </dt>
-                {detail.languages.map((language) => {
+                {worksDetail.languages.map((language) => {
                   return (
                     <dd key={language} className={styles.badge}>
                       {language}
@@ -74,7 +74,7 @@ export default function Works({ detail, previousPage, nextPage }) {
                 <dt className={styles.category}>
                   frameworks / libraries / systems <HiLightningBolt />
                 </dt>
-                {detail.frameworks.map((framework) => {
+                {worksDetail.frameworks.map((framework) => {
                   return (
                     <dd key={framework} className={styles.badge}>
                       {framework}
@@ -86,7 +86,7 @@ export default function Works({ detail, previousPage, nextPage }) {
                 <dt className={styles.category}>
                   tools <HiCog />
                 </dt>
-                {detail.tools.map((tool) => {
+                {worksDetail.tools.map((tool) => {
                   return (
                     <dd key={tool} className={styles.badge}>
                       {tool}
@@ -98,7 +98,7 @@ export default function Works({ detail, previousPage, nextPage }) {
                 <dt className={styles.category}>
                   roles <HiChat />
                 </dt>
-                {detail.roles.map((role) => {
+                {worksDetail.roles.map((role) => {
                   return (
                     <dd key={role} className={styles.badge}>
                       {role}
@@ -140,7 +140,7 @@ export async function getStaticProps({ params }) {
   const { slug } = params;
   const filePath = path.join(process.cwd(), `${slug}.json`);
   const jsonData = await fsPromises.readFile(filePath);
-  const detail = JSON.parse(jsonData); //return Object
+  const worksDetail = JSON.parse(jsonData); //return Object
   
   const listFilePath = path.join(process.cwd(), 'data.json');
   const listFileNames = await fsPromises.readFile(listFilePath);
@@ -160,7 +160,7 @@ export async function getStaticProps({ params }) {
   const nextPage = listItems[currentIndex + 1] || null;
 
   return {
-    props: { detail, previousPage, nextPage },
+    props: { worksDetail, previousPage, nextPage },
   };
 }
 
