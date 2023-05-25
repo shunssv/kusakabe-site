@@ -1,10 +1,10 @@
+import Head from 'next/head';
 import '@/styles/reset.scss';
 import '@/styles/globals.scss';
-import Head from 'next/head';
 import animates from '@/styles/_animation.module.scss';
 import { EB_Garamond } from 'next/font/google';
-import { Loader } from '@/components/Loader';
 import { GoogleTagManagerAbove } from '@/components/GoogleTagManagerAbove';
+import { Loader } from '@/components/Loader';
 import { useLoading } from '@/hooks/useLoading';
 
 const ENV = process.env.NEXT_PUBLIC_VERCEL_ENV;

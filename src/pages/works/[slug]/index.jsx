@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '@/styles/Works.module.scss';
-import { PrimaryLayout } from '@/components/Layouts/PrimaryLayout';
-import { Playfair_Display } from 'next/font/google';
-import { HiCode, HiLightningBolt, HiCog, HiChat } from 'react-icons/hi';
-import { ButtonARight } from '@/components/Buttons/ButtonARight';
-import { ButtonALeft } from '@/components/Buttons/ButtonALeft';
-import { Button } from '@/components/Buttons/Button';
-import { useRouter } from 'next/router';
 import fsPromises from 'fs/promises';
 import path from 'path';
+import { Playfair_Display } from 'next/font/google';
+import { useRouter } from 'next/router';
+import { HiCode, HiLightningBolt, HiCog, HiChat } from 'react-icons/hi';
+import { Button } from '@/components/Buttons/Button';
+import { ButtonALeft } from '@/components/Buttons/ButtonALeft';
+import { ButtonARight } from '@/components/Buttons/ButtonARight';
+import { PrimaryLayout } from '@/components/Layouts/PrimaryLayout';
 
 const playfairDisplay = Playfair_Display({ subsets: ['latin'] });
 
