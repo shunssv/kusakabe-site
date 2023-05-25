@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '@/styles/Custom404.module.scss';
-import { ButtonARight } from '@/components/Buttons/ButtonARight';
 import { Lora } from 'next/font/google';
+import { ButtonARight } from '@/components/Buttons/ButtonARight';
 import { PrimaryLayout } from '@/components/Layouts/PrimaryLayout';
 
 const lora = Lora({ subsets: ['latin'] });
