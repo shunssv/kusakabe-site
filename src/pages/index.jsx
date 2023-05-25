@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import styles from '@/styles/Home.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from '@/styles/Home.module.scss';
 import { HomeLayout } from '@/components/Layouts/HomeLayout';
 import { MediaList } from '@/components/MediaList';
 import mvCherry from '../assets/mv-icon.svg';

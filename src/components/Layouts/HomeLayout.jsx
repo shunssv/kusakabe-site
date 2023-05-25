@@ -1,6 +1,6 @@
 import styles from './HomeLayout.module.scss';
-import { HomeHeader } from '@/components/Layouts/HomeHeader';
 import { Footer } from '@/components/Layouts/Footer';
+import { HomeHeader } from '@/components/Layouts/HomeHeader';
 
 export function HomeLayout({ children }) {
   return (
