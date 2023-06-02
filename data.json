@@ -15,6 +15,14 @@
       "name": "Assignment",
       "features": "html / css / jquery",
       "thumbnail": "/works2.jpg"
+    },
+    {
+      "id": 3,
+      "slug": "shunkusakabe",
+      "domain": "shunkusakabe.com",
+      "name": "shun kusakabe",
+      "features": "next.js",
+      "thumbnail": "/works3.svg"
     }
   ]
 }
