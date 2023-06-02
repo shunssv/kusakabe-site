@@ -1,0 +1,16 @@
+{
+  "id": 3,
+  "slug": "shunkusakabe",
+  "thumbnail": "/works3.svg",
+  "ogpImage": "/ogp-works3.png",
+  "domain": "shunkusakabe.com",
+  "name": "shun kusakabe",
+  "description": "this is description",
+  "url": "/",
+  "summary": "this is summary",
+  "comment": "this is comment",
+  "languages": ["html", "css", "javascript"],
+  "frameworks": ["next.js", "react"],
+  "tools": ["notion", "clickup", "miro", "toggl", "pinterest", "xd", "photoshop", "illustrator", "google fonts", "adobe fonts", "adobe stock", "vscode", "github", "git", "terminal", "filezilla"],
+  "roles": ["planning", "design", "coding", "updating"]
+}
