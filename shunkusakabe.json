@@ -11,6 +11,6 @@
   "comment": "this is comment",
   "languages": ["html", "css", "javascript"],
   "frameworks": ["next.js", "react"],
-  "tools": ["notion", "clickup", "miro", "toggl", "pinterest", "xd", "photoshop", "illustrator", "google fonts", "adobe fonts", "adobe stock", "vscode", "github", "git", "terminal", "filezilla"],
+  "tools": ["notion", "clickup", "toggl", "pinterest", "xd", "photoshop", "illustrator", "google fonts", "adobe fonts", "adobe stock", "vscode", "github", "git", "terminal", "filezilla"],
   "roles": ["planning", "design", "coding", "updating"]
 }
