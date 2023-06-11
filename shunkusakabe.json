@@ -7,7 +7,7 @@
   "name": "my website",
   "description": "this is description",
   "url": "/",
-  "summary": "this is summary",
+  "summary": "My website is created by Next.js. This is for the first time to develop with the framework and React",
   "comment": "this is comment",
   "languages": ["html", "css", "javascript"],
   "frameworks": ["next.js", "react","react icon","react intersection observer","css modules","sass(scss)"],
