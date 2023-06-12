@@ -8,7 +8,7 @@
   "description": "this is description",
   "url": "/",
   "summary": "My website is created by Next.js. This is for the first time to develop with the framework and React",
-  "comment": "this is comment",
+  "comment": "I select Next.js because I wanted to learn modern javascript and framework",
   "languages": ["html", "css", "javascript"],
   "frameworks": ["next.js", "react","react icon","react intersection observer","css modules","sass(scss)"],
   "tools": ["notion", "clickup", "toggl", "pinterest", "xd", "photoshop", "illustrator", "google fonts", "adobe fonts", "adobe stock", "vscode", "github", "git", "terminal", "filezilla"],
