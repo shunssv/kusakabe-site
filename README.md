@@ -13,8 +13,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - CSS
 - JavaScript
 ### frameworks and libraries
-- Next.js
-- React
+- Next.js 13.2.1
+- React 18.2.0
 - React Icon
 - React Intersection Observer
 - CSS modules
