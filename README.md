@@ -15,7 +15,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ### frameworks and libraries
 - Next.js 13.2.1
 - React 18.2.0
-- React Icon
-- React Intersection Observer
+- React Icon 4.7.1
+- React Intersection Observer 9.4.3
 - CSS modules
 - Sass (scss)
