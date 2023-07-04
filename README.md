@@ -6,6 +6,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Home
 - Works
 - 404
+- Wikis (in progress)
+- Blog list section (in progress)
 
 ## prerequisites
 ### languages
