@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## directories
 - Home
-- Works
+- Works (will use Headless CMS)
 - 404
 - Wikis (in progress)
 - Blog list section (in progress)
