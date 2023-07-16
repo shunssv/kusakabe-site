@@ -11,6 +11,6 @@
   "comment": "I selected Next.js because I wanted to learn modern javascript and framework. I have only experience coding with HTML, CSS and Vanilla JavaScript beforehand. The concept of Next.js was very exceptional. I would like to dive into the framework. As next step, I will learn Vercel Storage and build dynamic pages.",
   "languages": ["html", "css", "javascript"],
   "frameworks": ["next.js", "react","react icon","react intersection observer","css modules","sass(scss)"],
-  "tools": ["notion", "clickup", "toggl", "pinterest", "xd", "photoshop", "illustrator", "google fonts", "adobe fonts", "adobe stock", "vscode", "github", "git", "terminal", "vercel"],
+  "tools": ["notion", "clickup", "linear", "toggl", "pinterest", "xd", "photoshop", "illustrator", "google fonts", "adobe fonts", "adobe stock", "vscode", "github", "git", "terminal", "vercel"],
   "roles": ["planning", "design", "coding", "updating"]
 }
