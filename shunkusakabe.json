@@ -8,7 +8,7 @@
   "description": "My website is created by Next.js. This is for the first time to develop with the framework and React",
   "url": "/",
   "summary": "My website is created by Next.js. This is for the first time to develop with the framework and React. The most difficult thing to build was making works page dynamically. Although I made the page with local JSON files on behalf of headless CMS, I had faced difficulty for a while.",
-  "comment": "I selected Next.js because I wanted to learn modern javascript and framework. I have only experience coding with HTML, CSS and Vanilla JavaScript beforehand. The concept of Next.js was very exceptional. I would like to dive into the framework. As next step, I will learn Vercel Storage and build dynamic pages.",
+  "comment": "I selected Next.js because I wanted to learn modern javascript and framework. I have only experience coding with HTML, CSS and Vanilla JavaScript beforehand. The concept of Next.js was very exceptional. I would like to dive into the framework. As next step, I would like to learn Vercel Storage and API, and then build dynamic pages.",
   "languages": ["html", "css", "javascript"],
   "frameworks": ["next.js", "react","react icon","react intersection observer","css modules","sass(scss)"],
   "tools": ["notion", "clickup", "linear", "toggl", "pinterest", "xd", "figma", "photoshop", "illustrator", "google fonts", "adobe fonts", "adobe stock", "vscode", "github", "git", "terminal", "vercel"],
