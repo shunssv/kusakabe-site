@@ -105,6 +105,28 @@ export default function Home({ worksItems }) {
           </div>
         </div>
       </section>
+
+      <section>
+        <div>
+          <h3>blog</h3>
+          <article>
+            <figure>
+              <img src="" alt="The 5 softwares you should use for developing a website" />
+            </figure>
+            <div>
+              <img src="" alt="hashnode | media platform" />
+              <span>hashnone</span>
+            </div>
+            <h4>The 5 softwares you should use for developing a website</h4>
+            <div>
+              <time datetime="2023-12-13">12/13/2023</time>
+            </div>
+            <div>
+              <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">view post</a>
+            </div>
+          </article>
+        </div>
+      </section>
     </>
   );
 }
