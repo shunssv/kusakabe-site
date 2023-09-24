@@ -111,60 +111,26 @@ export default function Home({ worksItems }) {
           <h3>blog</h3>
           <article>
             <figure>
-              <img src="" alt="The 5 softwares you should use for developing a website" />
+              <Image
+                src="/blog.jpg"
+                alt="The 5 softwares you should use for developing a website"
+                className={styles.blogImage}
+                width={353}
+                height={240}
+                priority
+              />
             </figure>
-            <div>
-              <img src="" alt="hashnode | media platform" />
-              <span>hashnone</span>
-            </div>
-            <h4>The 5 softwares you should use for developing a website</h4>
-            <div>
-              <time datetime="2023-12-13">12/13/2023</time>
-            </div>
-            <div>
-              <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">view post</a>
-            </div>
-          </article>
-          <article>
             <figure>
-              <img src="" alt="The 5 softwares you should use for developing a website" />
+              <Image
+                src="/hashnode.svg"
+                alt="hashnode | media platform"
+                className={styles.hashnodeImage}
+                width={20}
+                height={20}
+                priority
+              />
+              <figcaption>hashnode</figcaption>
             </figure>
-            <div>
-              <img src="" alt="hashnode | media platform" />
-              <span>hashnone</span>
-            </div>
-            <h4>The 5 softwares you should use for developing a website</h4>
-            <div>
-              <time datetime="2023-12-13">12/13/2023</time>
-            </div>
-            <div>
-              <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">view post</a>
-            </div>
-          </article>
-          <article>
-            <figure>
-              <img src="" alt="The 5 softwares you should use for developing a website" />
-            </figure>
-            <div>
-              <img src="" alt="hashnode | media platform" />
-              <span>hashnone</span>
-            </div>
-            <h4>The 5 softwares you should use for developing a website</h4>
-            <div>
-              <time datetime="2023-12-13">12/13/2023</time>
-            </div>
-            <div>
-              <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">view post</a>
-            </div>
-          </article>
-          <article>
-            <figure>
-              <img src="" alt="The 5 softwares you should use for developing a website" />
-            </figure>
-            <div>
-              <img src="" alt="hashnode | media platform" />
-              <span>hashnone</span>
-            </div>
             <h4>The 5 softwares you should use for developing a website</h4>
             <div>
               <time datetime="2023-12-13">12/13/2023</time>
