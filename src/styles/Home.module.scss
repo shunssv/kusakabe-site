@@ -286,3 +286,24 @@
     }
   }
 }
+
+.blogContainer {
+  background: linear-gradient(260deg, #fdfbfb 0%, #ebedee 100%) fixed;
+  padding: 10% 4% 30%;
+
+  @include m.mq(pc) {
+    padding: 4% 4% 12%;
+  }
+
+  .title {
+    font-size: 6rem;
+    
+    @include m.mq(tabAndPc) {
+      font-size: 12rem;
+    }
+  }
+
+  .blogList {
+    margin-top: 4em;
+  }
+}
