@@ -106,39 +106,41 @@ export default function Home({ worksItems }) {
         </div>
       </section>
 
-      <section>
-        <div>
-          <h3>blog</h3>
-          <article>
-            <figure>
-              <Image
-                src="/blog.jpg"
-                alt="The 5 softwares you should use for developing a website"
-                className={styles.blogImage}
-                width={353}
-                height={240}
-                priority
-              />
-            </figure>
-            <figure>
-              <Image
-                src="/hashnode.svg"
-                alt="hashnode | media platform"
-                className={styles.hashnodeImage}
-                width={20}
-                height={20}
-                priority
-              />
-              <figcaption>hashnode</figcaption>
-            </figure>
-            <h4>The 5 softwares you should use for developing a website</h4>
-            <div>
-              <time datetime="2023-12-13">12/13/2023</time>
-            </div>
-            <div>
-              <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">view post</a>
-            </div>
-          </article>
+      <section className={styles.blogContainer}>
+        <div className={styles.blogInner}>
+          <h3 className={styles.title}>blog</h3>
+          <div className={styles.blogList}>
+            <article>
+              <figure>
+                <Image
+                  src="/blog.jpg"
+                  alt="The 5 softwares you should use for developing a website"
+                  className={styles.blogImage}
+                  width={353}
+                  height={240}
+                  priority
+                />
+              </figure>
+              <figure>
+                <Image
+                  src="/hashnode.svg"
+                  alt="hashnode | media platform"
+                  className={styles.hashnodeImage}
+                  width={20}
+                  height={20}
+                  priority
+                />
+                <figcaption>hashnode</figcaption>
+              </figure>
+              <h4>The 5 softwares you should use for developing a website</h4>
+              <div>
+                <time datetime="2023-12-13">12/13/2023</time>
+              </div>
+              <div>
+                <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">view post</a>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </>
