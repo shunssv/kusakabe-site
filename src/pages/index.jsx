@@ -110,8 +110,8 @@ export default function Home({ worksItems }) {
         <div className={styles.blogInner}>
           <h3 className={styles.title}>blog</h3>
           <div className={styles.blogList}>
-            <article>
-              <figure>
+            <article className={styles.blogItem}>
+              <figure className={styles.thumbnail}>
                 <Image
                   src="/blog.jpg"
                   alt="The 5 softwares you should use for developing a website"
@@ -121,7 +121,7 @@ export default function Home({ worksItems }) {
                   priority
                 />
               </figure>
-              <figure>
+              <figure className={styles.mediaIcon}>
                 <Image
                   src="/hashnode.svg"
                   alt="hashnode | media platform"
@@ -132,11 +132,11 @@ export default function Home({ worksItems }) {
                 />
                 <figcaption>hashnode</figcaption>
               </figure>
-              <h4>The 5 softwares you should use for developing a website</h4>
-              <div>
+              <h4 className={styles.blogTitle}>The 5 softwares you should use for developing a website</h4>
+              <div className={styles.blogTimestamp}>
                 <time datetime="2023-12-13">12/13/2023</time>
               </div>
-              <div>
+              <div className={styles.blogButton}>
                 <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">view post</a>
               </div>
             </article>
