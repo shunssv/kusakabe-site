@@ -306,4 +306,17 @@
   .blogList {
     margin-top: 4em;
   }
+
+  .blogItem {
+    border-radius: 8px;
+    background: #403527;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.25);
+    padding: 1em;
+    color: #ffffff;
+
+    .thumbnail {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  }
 }
