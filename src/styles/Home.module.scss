@@ -318,5 +318,11 @@
       border-radius: 8px;
       overflow: hidden;
     }
+
+    .mediaIcon {
+      display: flex;
+      gap: 0.5em;
+      margin-top: 1em;
+    }
   }
 }
