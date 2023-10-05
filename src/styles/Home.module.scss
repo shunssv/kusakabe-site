@@ -333,5 +333,14 @@
     .blogTimestamp {
       margin-top: 0.25em;
     }
+
+    .blogButton {
+      width: 100%;
+      
+      a {
+        background-color: #ffffff;
+        color: #000000;
+      }
+    }
   }
 }
