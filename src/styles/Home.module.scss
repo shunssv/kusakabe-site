@@ -304,15 +304,19 @@
   }
 
   .blogList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
     margin-top: 4em;
   }
 
   .blogItem {
-    border-radius: 8px;
     background: #403527;
+    border-radius: 8px;
     box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.25);
-    padding: 1em;
     color: #ffffff;
+    flex-basis: 24%;
+    padding: 1em;
 
     .thumbnail {
       border-radius: 8px;
