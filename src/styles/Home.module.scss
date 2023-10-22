@@ -305,9 +305,14 @@
 
   .blogList {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 5em;
     margin-top: 4em;
+
+    @include m.mq(tabAndPc) {
+      flex-direction: row;
+    }
   }
 
   .blogItem {
@@ -330,7 +335,7 @@
     }
     
     .blogTitle {
-      margin-top: 0.5em;
+      margin-top: 0.25em;
       font-size: 1.5rem;
     }
 
@@ -344,8 +349,9 @@
       a {
         display: block;
         width: 100%;
-        background-color: #ccc;
-        color: #000000;
+        background-color: var(--background-color-gold);
+        color: var(--font-color-brown);
+        padding: 0.5em 0;
       }
     }
   }
