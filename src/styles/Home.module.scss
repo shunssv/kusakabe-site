@@ -352,6 +352,10 @@
         background-color: var(--background-color-gold);
         color: var(--font-color-brown);
         padding: 0.5em 0;
+
+        &:hover {
+          opacity: var(--opacity);
+        }
       }
     }
   }
