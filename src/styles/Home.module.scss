@@ -335,8 +335,8 @@
     }
     
     .blogTitle {
-      margin-top: 0.25em;
       font-size: 1.5rem;
+      margin-top: 0.25em;
     }
 
     .blogTimestamp {
@@ -344,14 +344,14 @@
     }
 
     .blogButton {
-      text-align: center;
       margin-top: 1em;
+      text-align: center;
       a {
-        display: block;
-        width: 100%;
         background-color: var(--background-color-gold);
         color: var(--font-color-brown);
+        display: block;
         padding: 0.5em 0;
+        width: 100%;
 
         &:hover {
           opacity: var(--opacity);
