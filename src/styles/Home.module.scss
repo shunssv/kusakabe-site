@@ -309,6 +309,7 @@
     flex-wrap: wrap;
     gap: 5em;
     margin-top: 4em;
+    justify-content: center;
 
     @include m.mq(tabAndPc) {
       flex-direction: row;
@@ -321,7 +322,7 @@
     box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.25);
     color: var(--font-color-white);
     flex-basis: 24%;
-    padding: 2em;
+    padding: 1em;
 
     .thumbnail {
       border-radius: 8px;
@@ -347,14 +348,16 @@
       margin-top: 1em;
       text-align: center;
       a {
-        background-color: var(--background-color-gold);
-        color: var(--font-color-brown);
+        border: solid 1px var(--line-color-white);
+        color: var(--font-color-white);
         display: block;
         padding: 0.5em 0;
+        transition: background-color var(--transition-speed), color var(--transition-speed);
         width: 100%;
 
         &:hover {
-          opacity: var(--opacity);
+          background-color: var(--background-color-white);
+          color: var(--font-color-brown);
         }
       }
     }
