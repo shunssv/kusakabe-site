@@ -200,36 +200,6 @@ export default function Home({ worksItems }) {
                 <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">view post</a>
               </div>
             </article>
-            <article className={styles.blogItem}>
-              <figure className={styles.thumbnail}>
-                <Image
-                  src="/blog.jpg"
-                  alt="The 5 softwares you should use for developing a website"
-                  className={styles.blogImage}
-                  width={353}
-                  height={240}
-                  priority
-                />
-              </figure>
-              <figure className={styles.mediaIcon}>
-                <Image
-                  src="/hashnode.svg"
-                  alt="hashnode | media platform"
-                  className={styles.hashnodeImage}
-                  width={20}
-                  height={20}
-                  priority
-                />
-                <figcaption>hashnode</figcaption>
-              </figure>
-              <h4 className={styles.blogTitle}>The 5 softwares you should use for developing a website</h4>
-              <div className={styles.blogTimestamp}>
-                <time datetime="2023-12-13">12/13/2023</time>
-              </div>
-              <div className={styles.blogButton}>
-                <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">view post</a>
-              </div>
-            </article>
           </div>
         </div>
       </section>
