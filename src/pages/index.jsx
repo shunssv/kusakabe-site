@@ -134,7 +134,7 @@ export default function Home({ worksItems }) {
               </figure>
               <h4 className={styles.blogTitle}>The 5 softwares you should use for developing a website</h4>
               <div className={styles.blogTimestamp}>
-                <time datetime="2023-12-13">12/13/2023</time>
+                <time datetime="2023-12-13">12/13/2024</time>
               </div>
               <div className={styles.blogButton}>
                 <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">view post</a>
