@@ -130,7 +130,7 @@ export default function Home({ worksItems }) {
                   height={20}
                   priority
                 />
-                <figcaption>hashnode</figcaption>
+                <figcaption>hashnode blog</figcaption>
               </figure>
               <h4 className={styles.blogTitle}>The 5 softwares you should use for developing a website</h4>
               <div className={styles.blogTimestamp}>
