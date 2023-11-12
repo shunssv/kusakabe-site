@@ -114,7 +114,7 @@ export default function Home({ worksItems }) {
               <figure className={styles.thumbnail}>
                 <Image
                   src="/blog.jpg"
-                  alt="The 5 softwares you should use for developing a website"
+                  alt="Improving Maintainability of Media Queries in Sass with Mixin"
                   className={styles.blogImage}
                   width={353}
                   height={240}
@@ -130,14 +130,14 @@ export default function Home({ worksItems }) {
                   height={20}
                   priority
                 />
-                <figcaption>hashnode blog</figcaption>
+                <figcaption>hashnode</figcaption>
               </figure>
-              <h4 className={styles.blogTitle}>The 5 softwares you should use for developing a website</h4>
+              <h4 className={styles.blogTitle}>Improving Maintainability of Media Queries in Sass with Mixin</h4>
               <div className={styles.blogTimestamp}>
-                <time datetime="2023-12-13">12/13/2024</time>
+                <time datetime="2023-08-18">08/18/2023</time>
               </div>
               <div className={styles.blogButton}>
-                <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">view post</a>
+                <a href="https://shunkusakabe.hashnode.dev/improving-maintainability-of-media-queries-in-sass-with-mixin" target="_blank" rel="noopener noreferrer">view post</a>
               </div>
             </article>
           </div>
