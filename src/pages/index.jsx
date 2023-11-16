@@ -132,7 +132,7 @@ export default function Home({ worksItems }) {
                 />
                 <figcaption>hashnode</figcaption>
               </figure>
-              <h4 className={styles.blogTitle}>Improving Maintainability of Media Queries in Sass with Mixin</h4>
+              <h4 className={styles.blogTitle}>Improving Maintainability of Media Queries in Sass with Mixin.</h4>
               <div className={styles.blogTimestamp}>
                 <time datetime="2023-08-18">08/18/2023</time>
               </div>
