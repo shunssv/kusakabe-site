@@ -106,7 +106,7 @@ export default function Home({ worksItems }) {
         </div>
       </section>
 
-      <section className={styles.blogContainer}>
+      {/* <section className={styles.blogContainer}>
         <div className={styles.blogInner}>
           <h3 className={styles.title}>blog</h3>
           <div className={styles.blogList}>
@@ -232,7 +232,7 @@ export default function Home({ worksItems }) {
             </article>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
